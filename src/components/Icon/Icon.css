@@ -1,0 +1,45 @@
+.Icon {
+  position: relative;
+  background-color: white;
+}
+
+.Icon:before {
+  content: '';
+  display: block;
+  margin-top: 100%;
+}
+
+.Icon-content {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  font-size: 300%;
+  transform-style: preserve-3d;
+  transform: rotateY(30deg) rotateX(30deg);
+  transition: transform .5s;
+}
+
+.Icon-content .layer {
+  position: absolute;
+  transition: transform .5s;
+}
+
+.Icon-content .layer-1 {
+  transform: translateZ(25px);
+}
+
+.Icon-content .layer-2 {
+  transform: translateZ(0px);
+  opacity: .5;
+}
+
+.Icon-content .layer-3 {
+  transform: translateZ(-25px);
+  opacity: .2;
+}
