@@ -16,7 +16,7 @@ const certification = {
     {
       color: '#004079',
       icon: 'icon icon-cci',
-      orgnism: 'CCI Lyon',
+      organism: 'CCI Lyon',
       title: 'Pass Entrepreneurs'
     },
     {
@@ -27,7 +27,7 @@ const certification = {
     },
     {
       color: '#F7C948',
-      icon: 'icon icon-livementor',
+      icon: 'icon icon-livementor-alt2',
       organism: 'LiveMentor',
       title: 'Digital Marketing'
     }

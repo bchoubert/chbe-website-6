@@ -4,6 +4,8 @@ import Header from './sections/Header/Header';
 
 import Education from './sections/Education/Education';
 import Networks from './sections/Networks/Networks';
+import Certifications from './sections/Certifications/Certifications';
+import Projects from './sections/Projects/Projects';
 
 import './App.css';
 
@@ -13,6 +15,8 @@ class App extends Component {
       <Header></Header>
       <Networks></Networks>
       <Education></Education>
+      <Certifications></Certifications>
+      <Projects></Projects>
     </div>;
   }
 }

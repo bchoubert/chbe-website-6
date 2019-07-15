@@ -1,0 +1,146 @@
+.Project {
+  margin: 1em;
+  flex-basis: calc(25% - 2em);
+  box-sizing: border-box;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.Project-image {
+  width: 100%;
+  height: 150px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.Project-description {
+  font-size: 80%;
+}
+
+.Project-inner {
+  padding: 1em;
+  position: relative;
+}
+
+.Project-inner:before {
+  margin-top: 50%;
+  display: block;
+  content: '';
+}
+
+.Project-inner .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  box-sizing: border-box;
+  z-index: 2;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity .5s, visibility .5s;
+}
+
+.Project-inner .content,
+.Project-inner .content:hover,
+.Project-inner .content:active,
+.Project-inner .content:link,
+.Project-inner .content:visited,
+.Project-inner .content:focus {
+  text-decoration: none;
+}
+
+.Project-inner .content span {
+  text-align: center;
+}
+
+.Project-inner .content .icon {
+  font-size: 250%;
+  margin-bottom: .5rem;
+}
+
+.Project-inner .details {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  top: 0;
+  left: 0;
+  clip-path: circle(70% at -30% 25%);
+  transition: clip-path .5s, color .5s;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: transparent;
+  font-size: 80%;
+  text-align: center;
+}
+
+.Project-inner .details a,
+.Project-inner .details a:hover,
+.Project-inner .details a:focus,
+.Project-inner .details a:active,
+.Project-inner .details a:visited,
+.Project-inner .details a:link {
+  background-color: white;
+  border-radius: 1em;
+  padding: .2em .5em;
+  text-decoration: none;
+}
+
+.Project-inner .details a + a {
+  margin-left: .5em;
+}
+
+.Project-inner .details div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+}
+
+.Project-inner .details svg {
+  margin-right: .3em;
+}
+
+.Project-inner .details > div {
+  margin-top: .5em;
+}
+
+.Project-inner .details h4 {
+  margin: .5em 0 0 0;
+  text-align: center;
+  flex-basis: 100%;
+  font-weight: normal;
+}
+
+.Project-inner .details span {
+  margin: .2em;
+}
+
+.Project:hover .content {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.Project:hover .details {
+  color: white;
+  clip-path: circle(150% at 0% 0%);
+}
+
+@media screen and (max-width: 800px) {
+  .Project {
+    flex-basis: calc(50% - 2em);
+  }
+}
