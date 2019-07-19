@@ -141,6 +141,15 @@
 
 @media screen and (max-width: 800px) {
   .Project {
-    flex-basis: calc(50% - 2em);
+    flex-basis: calc(50% - .6em);
+    margin: .3em;
+  }
+
+  .Project-inner {
+    padding: .3em;
+  }
+
+  .Project-inner:before {
+    margin-top: 80%;
   }
 }

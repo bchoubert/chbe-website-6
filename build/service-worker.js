@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/chbe-website-5/build/precache-manifest.fda158ec8e49c8e0930854f79dd60186.js"
+  "/chbe-website-5/build/precache-manifest.21c9ea316571025c9c496cb7aec46068.js"
 );
 
 workbox.clientsClaim();

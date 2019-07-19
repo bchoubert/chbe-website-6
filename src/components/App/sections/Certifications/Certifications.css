@@ -92,6 +92,16 @@
 
 @media screen and (max-width: 800px) {
   .Certification {
-    flex-basis: calc(50% - 2em);
+    flex-basis: calc(50% - .6em);
+    margin: .3em;
+    padding: .3em;
+  }
+
+  .Certification:before {
+    margin-top: 60%;
+  }
+
+  .Certification .content .icon {
+    font-size: 200%;
   }
 }

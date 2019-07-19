@@ -109,10 +109,20 @@
 
 @media screen and (max-width: 800px) {
   .Education {
-    flex-basis: calc(50% - 2em);
+    flex-basis: calc(50% - .6em);
+    margin: .3em;
+    padding: .3em;
   }
 
   .Education.Education--extended {
-    flex-basis: calc(100% - 2em);
+    flex-basis: calc(100% - .6em);
+  }
+
+  .Education:before {
+    margin-top: 50%;
+  }
+
+  .Education:not(.Education--extended):before {
+    margin-top: 70%;
   }
 }

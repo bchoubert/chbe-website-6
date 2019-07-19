@@ -8,6 +8,7 @@ import Certifications from './sections/Certifications/Certifications';
 import Projects from './sections/Projects/Projects';
 
 import './App.css';
+import Skills from './sections/Skills/Skills';
 
 class App extends Component {
   render() {
@@ -17,6 +18,7 @@ class App extends Component {
       <Education></Education>
       <Certifications></Certifications>
       <Projects></Projects>
+      <Skills></Skills>
     </div>;
   }
 }

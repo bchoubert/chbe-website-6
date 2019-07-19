@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/chbe-website-5/build/static/media/velov_2.e915483e.webp"
   },
   {
-    "revision": "29c405b6714d6c7a61d2",
-    "url": "/chbe-website-5/build/static/css/main.0193ffee.chunk.css"
+    "revision": "a9cbbd7a18deb873e56f",
+    "url": "/chbe-website-5/build/static/css/main.eded5da8.chunk.css"
   },
   {
     "revision": "f9121e49226ba5ae115d",
@@ -16,8 +16,8 @@ self.__precacheManifest = [
     "url": "/chbe-website-5/build/static/media/bc-font.151d3748.svg"
   },
   {
-    "revision": "3a18f24dfdf832f98b7d",
-    "url": "/chbe-website-5/build/static/js/2.7d5ffc46.chunk.js"
+    "revision": "8f1cdd0d72efe821d0fd",
+    "url": "/chbe-website-5/build/static/js/2.736a935b.chunk.js"
   },
   {
     "revision": "3839ff3cbd0cbfaac27500d0447b4e78",
@@ -52,8 +52,8 @@ self.__precacheManifest = [
     "url": "/chbe-website-5/build/static/media/velov_1.b248a0be.webp"
   },
   {
-    "revision": "29c405b6714d6c7a61d2",
-    "url": "/chbe-website-5/build/static/js/main.f3cd60bd.chunk.js"
+    "revision": "a9cbbd7a18deb873e56f",
+    "url": "/chbe-website-5/build/static/js/main.68db57ef.chunk.js"
   },
   {
     "revision": "b7286ff0870fdb56007cb5dbe1995f7f",
@@ -80,6 +80,10 @@ self.__precacheManifest = [
     "url": "/chbe-website-5/build/static/media/ovh_1.2d2c9baa.webp"
   },
   {
+    "revision": "d12740a6ad041029054e35c77200ba1a",
+    "url": "/chbe-website-5/build/static/media/skills.d12740a6.svg"
+  },
+  {
     "revision": "1b1592b1ae93ed4c7f003f9d2e88e28d",
     "url": "/chbe-website-5/build/static/media/bc-font.1b1592b1.woff2"
   },
@@ -96,11 +100,11 @@ self.__precacheManifest = [
     "url": "/chbe-website-5/build/static/media/bc-font.b5f1d56d.ttf"
   },
   {
-    "revision": "3a18f24dfdf832f98b7d",
+    "revision": "8f1cdd0d72efe821d0fd",
     "url": "/chbe-website-5/build/static/css/2.065230ab.chunk.css"
   },
   {
-    "revision": "bf9a06035a89ffe7a9971412e66de99a",
+    "revision": "0cc78546591e058dcaed60adcdc43e31",
     "url": "/chbe-website-5/build/index.html"
   }
 ];
