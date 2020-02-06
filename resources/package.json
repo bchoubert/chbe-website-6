@@ -1,0 +1,16 @@
+{
+  "name": "chbe-website-6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-pro": "^5.12.0",
+    "bc-font": "^1.8.1",
+    "fullpage.js": "^3.0.8"
+  }
+}
