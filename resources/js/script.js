@@ -1,6 +1,6 @@
 'use strict';
 
-const BASE_URL = '/chbe-website-7';
+const BASE_URL = '';
 
 const EMAIL_URL = BASE_URL + '/resources/php/send.php';
 
