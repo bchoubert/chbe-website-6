@@ -74,12 +74,14 @@ const TEMPLATES = {
         `}
     </li>`,
     network: net => `<li>
-        <a href="${net.link}" title="${net.name}" target="_blank">
+        <a href="${net.link}" title="${net.name}" target="_blank" rel="noopener noreferrer">
             <i class="${net.icon}"></i>
+            <span class="sr-only">${net.name}</span>
         </a>
     </li>`,
-    navNetwork: net => `<a class="nav-action nav-action-reverse xl-only" href="${net.link}" target="_blank" style="background-color: ${net.color}" title="${net.name}">
+    navNetwork: net => `<a class="nav-action nav-action-reverse xl-only" href="${net.link}" target="_blank" style="background-color: ${net.color}" title="${net.name}" rel="noopener noreferrer">
         <i class="${net.icon}"></i>
+        <span class="sr-only">${net.name}</span>
     </a>`,
     service: s => `<li class="no-link with-icon">
         <i class="li-icon fas ${s.icon} fa-fw"></i>
@@ -93,7 +95,7 @@ const TEMPLATES = {
         ${!!s.list ? `${s.list.join(', ')}` : ''}
     </li>`,
     shot: s => `<li class="li-shot">
-        <a href="${s.html_url}" target="_blank">
+        <a href="${s.html_url}" target="_blank" rel="noopener noreferrer">
             <img src="${s.images.normal}" alt="${s.title}" title="${s.title}" />
         </a>
     </li>`,
@@ -232,11 +234,11 @@ const DETAILS_TEMPLATES = {
                     </h2>
                     <span>${p.description}</span>
                     <span class="link-group">
-                        ${!!p.website ? `<a href="${p.website}" target="_blank" aria-label="live website" style="background-color: ${p.color}">
+                        ${!!p.website ? `<a href="${p.website}" target="_blank" aria-label="live website" style="background-color: ${p.color}" rel="noopener noreferrer">
                             <i class="fas fa-globe"></i>
                             Live
                         </a>` : ''}
-                        ${p.links.map(l => `<a href="${l.link}" target="_blank" aria-label="${l.title}" style="background-color: ${p.color}">
+                        ${p.links.map(l => `<a href="${l.link}" target="_blank" aria-label="${l.title}" style="background-color: ${p.color}" rel="noopener noreferrer">
                             <i class="${l.icon}"></i>
                             ${l.title}
                         </a>`).join('')}
@@ -253,7 +255,9 @@ const DETAILS_TEMPLATES = {
                         </li>`).join('')}
                     </ul>
                 </div>
-                <a href="${BASE_URL + p.images[0]}" target="_blank" class="slide-side" style="background-image: url('${BASE_URL + p.images[0]}')"></a>
+                <a href="${BASE_URL + p.images[0].types[1].src}" target="_blank" class="slide-side" style="background-image: url('${BASE_URL + p.images[0].types[0].src}')" rel="noopener noreferrer">
+                    <span class="sr-only">${p.title} Preview</span>
+                </a>
             </div>
         </div>
     `
@@ -278,9 +282,23 @@ const initFullPage = () => new fullpage('#fullpage', {
     }
 });
 
+const transformData = () => {
+    console.log(`
+${data.experience.map(exp => `${exp.title}\n${exp.company}\n${exp.dates.start} - ${exp.dates.end}\n${exp.location}\n${exp.contract}
+Technologies: ${exp.mainTechnologies.map(tech => tech.title).join(', ')}, ${exp.otherTechnologies.map(tech => tech.title).join(', ')}
+Projects:\n${exp.projects.map(proj => `${proj.name}: ${proj.description}`).join('\n')}
+Tasks:\n${exp.tasks.map(task => `- ${task}`).join('\n')}`).join('\n\n')}
+
+${data.projects.map(proj => `${proj.title}\n${proj.description}
+Technologies: ${proj.technologies.map(tech => tech.title).join(', ')}`).join('\n\n')}
+
+${data.education.map(edu => `${edu.title}\n${edu.school}\n${edu.dates.yEnd}
+${edu.details.skills.map(skL => `${skL.title}: ${skL.list.join(', ')}`).join('\n')}`).join('\n\n')}`);
+};
+
 const initSections = () => {
     document.querySelector('#experience-list').innerHTML = data.experience.map(TEMPLATES.experience).join('');
-    document.querySelector('#networks').innerHTML = data.networks.map(TEMPLATES.network).join(`<i class="dot"></i>`);
+    document.querySelector('#networks').innerHTML = data.networks.map(TEMPLATES.network).join(`<li class="dot"></li>`);
     document.querySelector('#services-list').innerHTML = data.services.map(TEMPLATES.service).join('');
     document.querySelector('#skills-list').innerHTML = data.skills.map(TEMPLATES.skill).join('');
     document.querySelector('#projects-list').innerHTML = data.projects.map(TEMPLATES.project).join('');
@@ -312,11 +330,23 @@ const getDribbbleShots = () => {
         });
 };
 
-(function () {
+const registerSW = () => {
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => 
+            navigator.serviceWorker.register(BASE_URL + '/service-worker.js')
+                .catch(console.error)
+        );
+    }
+      
+};
+
+(() => {
     initSections();
     initFullPage();
-    getDribbbleShots();
+    // Defer Dribbble API call
+    setTimeout(getDribbbleShots, 5000);
 
     UTILS['move'] = fullpage_api.moveTo;
-    
+
+    registerSW();    
 })();

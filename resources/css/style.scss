@@ -24,6 +24,13 @@ body, html {
   background-color: var(--super-light);
 }
 
+.sr-only {
+  position: absolute;
+  display: block;
+  top: -9999px;
+  left: -9999px;
+}
+
 h1, h2, h3 {
   font-weight: normal;
   text-align: center;
@@ -82,7 +89,8 @@ ul {
   }
 }
 
-i.dot {
+i.dot,
+li.dot {
   height: 4px;
   width: 4px;
   position: relative;
@@ -445,7 +453,7 @@ nav {
     margin: 1rem 0 3rem 0;
     font-size: 120%;
 
-    li {
+    li:not(.dot) {
       display: inline;
     }
   }

@@ -1,0 +1,211 @@
+Graphic & UI Designer
+TC Gannay
+Apr 2019 - July 2019
+Remote
+voluntary
+Technologies: Adobe Xd, Inkscape, 
+Projects:
+Logo & Color Scheme Creation: New logo for this sportive association
+Website prototype: 
+Tasks:
+- Designed a simple color scheme
+- Proposed a dozen of logos
+- Created numerous variants of the chosen logo (monochromatic, bi-tone)
+- Built several website prototypes, including proposed functionalities
+- Written English & French Data Privacy
+
+UI Designer & R&D Full-Stack Web Developer
+Sogelink
+Mar 2018 - Mar 2019
+Lyon, FR
+External - via Intitek
+Technologies: Angular, Java Spring, Advanced Git, Python, GitLab CI, ThreeJS, BabylonJS, ProtoIO, AnyDWG
+Projects:
+Maplink: Maplink is both a map component integrated into DICT.fr and a Network and Urban Properties Management Solution
+GeoSnap: Surveyor / Topography productivity Saas Solution
+Tasks:
+- Designed, Developed and integrated new components
+- Created new API endpoints and develop related views
+- Created new UI fashionable and usable components meeting with the design team
+- Constructed a UX-first strategy for complex forms
+- Designed new business monochrome and bi-tone icons
+- Optimized 3D scatter plots filter and transformation algorithms
+- Used the GeoServer API to update PCRS and Geometry Layers in real-time
+- Developed POCs related to 2D and 3D files (CAO, 3D Scatter plots, GeoJSON...) visualization in web browsers
+- Trained new colleagues to the tech environment, Git and Angular technologies
+
+Web Developer & UI Designer
+Maincare Solutions
+Sept 2017 - Mar 2018
+Lyon, FR
+External - via Intitek
+Technologies: Java EE, BackboneJS, Bootstrap, 
+Projects:
+IdeoMed / IdeoSanté: Product that equips 80% of French hospitals to help them to manage health profiles, pills stock...
+Tasks:
+- Designed and Developed new functionalities
+- Participated in specifications meetings
+- Debated about form UX design
+
+Web Developer, UI Designer & Branding
+VDS Consulting
+Feb 2017 - Sept 2017
+Remote
+Intern
+Technologies: Symfony, Java, Spring, NodeJS Express, Bootstrap, MDBootstrap, Sass, Adobe LiveCycle, Leaflet
+Projects:
+Brussels Aquariums: Complete e-commerce solution
+F@ctorio: Transparent factoring tool
+VDS Consulting Website: Showcase Website
+Find an Umbrella: Find umbrella companies all over the world
+CV-Broker: Full management website fore recruiters and companies
+My Landlord Club: Real-estate crowd-funding
+Tasks:
+- Written Specifications
+- Designed layouts and views
+- Created Brands and Icons as well as Color Schemes
+- Developed solutions in speed development with appropriate technologies
+- Put online an e-commerce complete solution with 10,000+ products and online checkout
+- Developed independant & automatic CV creation module, calling official European Commission APIs and generating on-the-fly PDFs
+- Written reports for web-marketing and design problematics
+- Created dynamic PDF forms that interact with multiple APIs
+
+Web & Chrome Extension Developer
+Iunex Group
+July 2016 - Mar 2017
+Remote
+Cooperation
+Technologies: PHP, Chrome Extension, JavaScript, MySQL
+Projects:
+Rate Job Offer: Inventive Chrome Extension to find a job
+Crazy Tips Work: Comment and discuss on job offers have never been so simple
+Crazy Tips: Innovative solutions for discussing about real-estate investments and offers
+Tasks:
+- Designed and conceived an easily-maintanaible and evolutive architecture including a high-volume web-service with OAuth authentications
+- Developed content and background scripts
+- Created new graphic charts
+- Designed comprehensive forms
+- Developed an optimized on-the-fly URL Scanning algorithm based on Regexp and Synchronisation
+- Created an algorithm that suggest offers depending on the commented ones
+
+Web Lead Developer
+Brayton Global
+July 2015 - Sept 2016
+Antwerp, BE then Remote
+Intern, then Fixed-Term Contract
+Technologies: Symfony, Bootstrap, jQuery, MySQL, Trello
+Projects:
+Vemasys: The new era of Vessel Management - Fluvial Vessel ERP
+SkillMatrix: Smart Applicant Tracking System for recruitment companies
+Tasks:
+- Conceived and developed a complex architecture
+- Implemented Front-End parts of the applications following mockups and solving complex ergonomic problems
+- Created elegant designs and easily-maintainable code
+- Participated in weekly meetings with the Product Owner and organized daily tasks of the team
+
+Mobile App Tester
+CityZenDesk
+Jan 2015 - June 2015
+Lyon, FR
+External - via Polyenco
+Technologies: TestFlight, 
+Projects:
+CityZenDesk: The multifunctional app created to ease your daily life in your city and at home
+Tasks:
+- Followed test plans
+- Produced test reports
+- Raised problematics around offline and responsive design
+
+Software Developer
+CNH Industrial
+Apr 2014 - June 2014
+Bourbon-Lancy, FR
+Intern
+Technologies: WinDev, HFSQL Database, 
+Projects:
+CNH traceability tool: Developed a new application between PMS, a SAP module, and operators
+Tasks:
+- Trained myself on technologies used at this plant
+- Analysed problems with the old application
+- Took into account new standards, partially from the direction
+- Developed a high-availability application with centralized database and automatic synchronisation for offline usage
+- Asked operators about their needs, and find new functionnalities for an easier utilization
+- Developed specific views for maintenance and team managers
+- Created an algorithm to check serial numbers for error-less entries
+- Created SAP files and fetched APIs for new references
+
+Web Lead Developer
+Archives Départementales de l'Ain
+Nov 2013 - Mar 2014
+Bourg-en-Bresse, FR
+External - via IUT Lyon 1
+Technologies: PHP, JavaScript, Google Maps API, jQuery, MySQL
+Projects:
+Project Centenaire 14/18: Award-winning website that presents in an innovative way data from World War 1
+Tasks:
+- Created a Graphic Chart and a logo
+- Developed an optimized map module
+- Organized teamwork and communication with the client
+- Transformed data for iso database
+
+Crypto Viewer
+Mobile App to track crypto-currencies & your assets
+Technologies: React Native, Expo, TypeScript
+
+Air-Data
+Airlines Data Viewer with 800+ companies and 10,000+ routes
+Technologies: Firebase Real-Time Database, VueJS, Leaflet, QGis
+
+Logistics
+Complex Logistics ERP: GPS Tracking, invoices, recruitment, maintenance...
+Technologies: Firebase Cloud Firestore + Auth + Storage + Functions, React, OpenLayers, Sass
+
+E-nos
+Your Files and Programs, online
+Technologies: Angular + NG Material, Java Spring, MySQL, Sass
+
+BC-Font
+The Developer Font with 1,000+ icons
+Technologies: Gimp, Webpack, Inkscape
+
+Velov
+Deep analysis of French renting bike company
+Technologies: jQuery, ChartJS, Leaflet, Talend ETL, Qlik Sense
+
+Evento
+World-wide public events, developed with multiple technologies
+Technologies: NodeJS Express, ASP.net, Laravel, PHP, Java Spring, Symfony, Angular, Leaflet
+
+Nescafe Dolce Gusto Webstore
+E-commerce website to order your coffee pods & machines
+Technologies: Django, SQLite, React, Material UI
+
+Produits du Tiroir
+Branding and Web Marketing Strategy, building Terroir's French products website
+Technologies: PrestaShop, WordPress, PHP, Facebook APIs, YouTube
+
+BMW Car Configurator
+Complete car configurator
+Technologies: Python Flask, jQuery, SQLite, MDBootstrap
+
+Mobile Web Specialist
+Google
+Currently passing
+Tech Skills: Accessibility, Progressive Web Apps, Responsive, Indexed DB, Touch Events, Networking, Web Workers, Performance
+
+CS For Web Programing
+Harvard University (via edX)
+2020
+Tech Skills: Image Processing, Complex Algorithms, Data Structures, Web Projects, Socket communication, APIs
+
+CS Engineer - Master's Degree
+Polytech Lyon
+2017
+Tech Skills: Machine Learning, Big Data, Web-Marketing, Object-oriented Programming, Rest APIs, Business Intelligence, Advanced Software Development, Signal Processing, Embedded Systems, Automation, Algorithms
+Core Skills: Innovation, Project Management, Entrepreneurship, Communication, Quality
+
+CS Analyst & Developer
+IUT Lyon 1
+2014
+Tech Skills: Software Development, API  Protocols, Concurrency, Systems, Algorithms
+Core Skills: Company Organization, Communication, Project Management

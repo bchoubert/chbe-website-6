@@ -649,7 +649,18 @@ const data = {
       icon: 'icon icon-crypto-viewer',
       color: '#1543E4',
       images: [
-        '/resources/img/projects/cryptoviewer_1.webp'
+        {
+          types: [
+            {
+              type: 'image/webp',
+              src: '/resources/img/projects/cryptoviewer_1.webp'
+            },
+            {
+              type: 'image/png',
+              src: '/resources/img/projects/cryptoviewer_1.png'
+            }
+          ]
+        }
       ],
       links: [
         {
@@ -685,7 +696,18 @@ const data = {
       color: '#FF4500',
       website: 'https://k044n51lk5.csb.app/',
       images: [
-        '/resources/img/projects/airdata_1.webp'
+        {
+          types: [
+            {
+              type: 'image/webp',
+              src: '/resources/img/projects/airdata_1.webp'
+            },
+            {
+              type: 'image/png',
+              src: '/resources/img/projects/airdata_1.png'
+            }
+          ]
+        }
       ],
       links: [
         {
@@ -724,7 +746,18 @@ const data = {
       icon: 'icon icon-logistics',
       color: '#B41B1F',
       images: [
-        '/resources/img/projects/logistics_1.webp'
+        {
+          types: [
+            {
+              type: 'image/webp',
+              src: '/resources/img/projects/logistics_1.webp'
+            },
+            {
+              type: 'image/png',
+              src: '/resources/img/projects/logistics_1.png'
+            }
+          ]
+        }
       ],
       links: [
         {
@@ -758,7 +791,18 @@ const data = {
       icon: 'icon icon-enos',
       color: '#6FAE47',
       images: [
-        '/resources/img/projects/enos_1.webp'
+        {
+          types: [
+            {
+              type: 'image/webp',
+              src: '/resources/img/projects/enos_1.webp'
+            },
+            {
+              type: 'image/png',
+              src: '/resources/img/projects/enos_1.png'
+            }
+          ]
+        }
       ],
       links: [
         {
@@ -793,7 +837,18 @@ const data = {
       color: '#EA2834',
       website: 'https://bchoubert.github.io/bc-font/',
       images: [
-        '/resources/img/projects/bcfont_1.webp'
+        {
+          types: [
+            {
+              type: 'image/webp',
+              src: '/resources/img/projects/bcfont_1.webp'
+            },
+            {
+              type: 'image/png',
+              src: '/resources/img/projects/bcfont_1.png'
+            }
+          ]
+        }
       ],
       links: [
         {
@@ -829,7 +884,18 @@ const data = {
       color: '#BF1410',
       website: 'https://bchoubert.github.io/bi-velov/',
       images: [
-        '/resources/img/projects/velov_1.webp'
+        {
+          types: [
+            {
+              type: 'image/webp',
+              src: '/resources/img/projects/velov_1.webp'
+            },
+            {
+              type: 'image/png',
+              src: '/resources/img/projects/velov_1.png'
+            }
+          ]
+        }
       ],
       links: [
         {
@@ -867,7 +933,18 @@ const data = {
       icon: 'icon icon-evento-alt2',
       color: '#E71F63',
       images: [
-        '/resources/img/projects/evento_1.webp'
+        {
+          types: [
+            {
+              type: 'image/webp',
+              src: '/resources/img/projects/evento_1.webp'
+            },
+            {
+              type: 'image/png',
+              src: '/resources/img/projects/evento_1.png'
+            }
+          ]
+        }
       ],
       links: [
         {
@@ -917,7 +994,18 @@ const data = {
       icon: 'icon icon-dolcegusto-alt2',
       color: '#653800',
       images: [
-        '/resources/img/projects/dolcegusto_1.webp'
+        {
+          types: [
+            {
+              type: 'image/webp',
+              src: '/resources/img/projects/dolcegusto_1.webp'
+            },
+            {
+              type: 'image/png',
+              src: '/resources/img/projects/dolcegusto_1.png'
+            }
+          ]
+        }
       ],
       links: [
         {
@@ -951,7 +1039,18 @@ const data = {
       icon: 'icon icon-pdt',
       color: '#333333',
       images: [
-        '/resources/img/projects/pdt_1.webp'
+        {
+          types: [
+            {
+              type: 'image/webp',
+              src: '/resources/img/projects/pdt_1.webp'
+            },
+            {
+              type: 'image/png',
+              src: '/resources/img/projects/pdt_1.png'
+            }
+          ]
+        }
       ],
       links: [
         {
@@ -989,8 +1088,18 @@ const data = {
       icon: 'icon icon-bmw',
       color: '#418DAD',
       images: [
-        '/resources/img/projects/bmw_1.webp',
-        '/resources/img/projects/bmw_2.webp'
+        {
+          types: [
+            {
+              type: 'image/webp',
+              src: '/resources/img/projects/bmw_1.webp'
+            },
+            {
+              type: 'image/png',
+              src: '/resources/img/projects/bmw_1.png'
+            }
+          ]
+        }
       ],
       links: [
         {

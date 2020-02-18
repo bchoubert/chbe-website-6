@@ -9,16 +9,32 @@
         <meta name="description" content="Bertrand Choubert, Web Developer and UI Designer. I design and develop innovative websites with modern technologies and languages." />
         <meta name="keywords" content="designer, ui, developer, bertrand, choubert, website, web, engineer, responsive, enthusiast, passionate" />
 
+        <meta name="theme-color" content="#252525" />
+
         <title>Bertrand CHOUBERT's Porfolio - Web Developer and UI Designer</title>
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" />
+
         <link rel="stylesheet" href="resources/node_modules/bc-font/dist/bc-font.css" />
         <link rel="stylesheet" href="resources/node_modules/fullpage.js/dist/fullpage.min.css" />
 
         <link rel="icon" type="image/png" href="resources/img/favicon.png" />
 
+        <link rel="manifest" href="manifest.json" />
+
         <link rel="stylesheet" href="resources/node_modules/@fortawesome/fontawesome-pro/css/all.min.css" />
-        <link rel="stylesheet" href="resources/css/style.css" />
+
+        <link rel="preload" as="style" href="resources/css/style.min.css" />
+        <link rel="stylesheet" href="resources/css/style.min.css" />
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-82368304-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-82368304-2');
+        </script>
     </head>
 
     <body>
@@ -30,6 +46,7 @@
             <a class="nav-action nav-action-large" href="resources/Resume_Bertrand_Choubert.pdf" title="Download Resume" target="_blank">
                 <i class="fas fa-arrow-to-bottom"></i>
                 <span class="nav-label xl-only">Resume</span>
+                <span class="sr-only">Download my resume</span>
             </a>
             <a id="nav-contact-link" class="nav-action nav-action-reverse nav-action-large" onclick="UTILS.move('contact')">
                 <i class="fas fa-envelope"></i>

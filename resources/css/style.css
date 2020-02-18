@@ -62,6 +62,13 @@ body, html {
   background-color: var(--super-light);
 }
 
+.sr-only {
+  position: absolute;
+  display: block;
+  top: -9999px;
+  left: -9999px;
+}
+
 h1, h2, h3 {
   font-weight: normal;
   text-align: center;
@@ -126,7 +133,8 @@ ul:not(.list-style) {
   padding: 0;
 }
 
-i.dot {
+i.dot,
+li.dot {
   height: 4px;
   width: 4px;
   position: relative;
@@ -582,7 +590,7 @@ nav .nav-separator {
   font-size: 120%;
 }
 
-[data-anchor=header] #networks li {
+[data-anchor=header] #networks li:not(.dot) {
   display: inline;
 }
 
