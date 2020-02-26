@@ -18,13 +18,12 @@ const filesToCache = [
   'resources/node_modules/bc-font/dist/bc-font.ttf',
   'resources/node_modules/bc-font/dist/bc-font.woff',
 
-  'resources/node_modules/@fortawesome/fontawesome-pro/css/all.min.css',
-  'resources/node_modules/@fortawesome/fontawesome-pro/webfonts/fa-brands-400.ttf',
-  'resources/node_modules/@fortawesome/fontawesome-pro/webfonts/fa-brands-400.woff',
+  'resources/node_modules/@fortawesome/fontawesome-pro/css/solid.min.css',
+  'resources/node_modules/@fortawesome/fontawesome-pro/css/fontawesome.min.css',
   
   'manifest.json'
 ];
-const cacheName = 'CHBE-1';
+const cacheName = 'CHBE-2';
 
 self.addEventListener('install', e => {
   e.waitUntil(

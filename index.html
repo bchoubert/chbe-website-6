@@ -13,28 +13,19 @@
 
         <title>Bertrand CHOUBERT's Porfolio - Web Developer and UI Designer</title>
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" />
+        <link rel="preload" as="script" href="resources/node_modules/fullpage.js/dist/fullpage.min.js" />
 
-        <link rel="stylesheet" href="resources/node_modules/bc-font/dist/bc-font.css" />
-        <link rel="stylesheet" href="resources/node_modules/fullpage.js/dist/fullpage.min.css" />
+        <link rel="preload" as="style" href="resources/node_modules/bc-font/dist/bc-font.css" onload="this.rel='stylesheet'" />
+        <link rel="preload" as="style" href="resources/node_modules/fullpage.js/dist/fullpage.min.css" onload="this.rel='stylesheet'" />
 
-        <link rel="icon" type="image/png" href="resources/img/favicon.png" />
-
-        <link rel="manifest" href="manifest.json" />
-
-        <link rel="stylesheet" href="resources/node_modules/@fortawesome/fontawesome-pro/css/all.min.css" />
-
-        <link rel="preload" as="style" href="resources/css/style.min.css" />
         <link rel="stylesheet" href="resources/css/style.min.css" />
 
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-82368304-2"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" />
 
-            gtag('config', 'UA-82368304-2');
-        </script>
+        <link rel="stylesheet" href="resources/node_modules/@fortawesome/fontawesome-pro/css/fontawesome.min.css" />
+        <link rel="stylesheet" href="resources/node_modules/@fortawesome/fontawesome-pro/css/solid.min.css" />
+        <link rel="icon" type="image/png" href="resources/img/favicon.png" />
+        <link rel="manifest" href="manifest.json" />
     </head>
 
     <body>
@@ -141,5 +132,14 @@
         <script type="text/javascript" src="resources/js/params.inc.js"></script>
         <script type="text/javascript" src="resources/js/data.js"></script>
         <script type="text/javascript" src="resources/js/script.js"></script>
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-82368304-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-82368304-2');
+        </script>
     </body>
 </html>

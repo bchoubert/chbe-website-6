@@ -56,8 +56,8 @@ const data = {
       location: 'Remote',
       dates: {
         start: 'Nov 2019',
-        end: 'Current',
-        yEnd: 'Currently passing'
+        end: 'Feb 2020',
+        yEnd: '2020'
       },
       details: {
         skills: [
@@ -329,7 +329,7 @@ const data = {
         {
           name: 'CV-Broker',
           icon: 'icon icon-cvbroker',
-          description: 'Full management website fore recruiters and companies'
+          description: 'Full management website for recruiters and companies'
         },
         {
           name: 'My Landlord Club',
@@ -413,7 +413,7 @@ const data = {
         {
           name: 'Crazy Tips',
           icon: 'icon icon-crazytips',
-          description: 'Innovative solutions for discussing about real-estate investments and offers'
+          description: 'Innovative solution for discussing about real-estate investments and offers'
         }
       ],
       tasks: [
@@ -449,7 +449,7 @@ const data = {
       color: '#DD7520',
       icon: 'icon icon-braytonglobal-alt',
       company: 'Brayton Global',
-      title: 'Web Lead Developer',
+      title: 'Lead Web Developer',
       location: 'Antwerp, BE then Remote',
       contract: 'Intern, then Fixed-Term Contract',
       dates: {
@@ -460,7 +460,7 @@ const data = {
         {
           name: 'Vemasys',
           icon: 'icon icon-vemasys-alt',
-          description: 'The new era of Vessel Management - Fluvial Vessel ERP'
+          description: 'The new era of Vessel Management - Fluvial / Inland Vessel ERP'
         },
         {
           name: 'SkillMatrix',
@@ -476,7 +476,7 @@ const data = {
       ],
       mainTechnologies: [
         {
-          icon: 'icon icon-symfony',
+          icon: 'icon icon-symfony-alt',
           title: 'Symfony'
         },
         {
@@ -545,7 +545,7 @@ const data = {
         {
           name: 'CNH traceability tool',
           icon: 'icon icon-cnh',
-          description: 'Developed a new application between PMS, a SAP module, and operators'
+          description: 'New software involving PMS, SAP and operators'
         }
       ],
       tasks: [
@@ -553,7 +553,7 @@ const data = {
         'Analysed problems with the old application',
         'Took into account new standards, partially from the direction',
         'Developed a high-availability application with centralized database and automatic synchronisation for offline usage',
-        'Asked operators about their needs, and find new functionnalities for an easier utilization',
+        'Asked operators about their needs, and find new functionalities for an easier utilization',
         'Developed specific views for maintenance and team managers',
         'Created an algorithm to check serial numbers for error-less entries',
         'Created SAP files and fetched APIs for new references'
@@ -573,7 +573,7 @@ const data = {
       color: '#0683B9',
       icon: 'icon icon-ain',
       company: 'Archives Départementales de l\'Ain',
-      title: 'Web Lead Developer',
+      title: 'Lead Web Developer',
       location: 'Bourg-en-Bresse, FR',
       contract: 'External - via IUT Lyon 1',
       dates: {
