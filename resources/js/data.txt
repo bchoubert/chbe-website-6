@@ -19,7 +19,7 @@ Sogelink
 Mar 2018 - Mar 2019
 Lyon, FR
 External - via Intitek
-Technologies: Angular, Java Spring, Advanced Git, Python, GitLab CI, ThreeJS, BabylonJS, ProtoIO, AnyDWG
+Technologies: Angular, Java Spring, Advanced Git, Python, TypeScript, GitLab CI, ThreeJS, BabylonJS, ProtoIO, AnyDWG
 Projects:
 Maplink: Maplink is both a map component integrated into DICT.fr and a Network and Urban Properties Management Solution
 GeoSnap: Surveyor / Topography productivity Saas Solution
@@ -58,7 +58,7 @@ Brussels Aquariums: Complete e-commerce solution
 F@ctorio: Transparent factoring tool
 VDS Consulting Website: Showcase Website
 Find an Umbrella: Find umbrella companies all over the world
-CV-Broker: Full management website fore recruiters and companies
+CV-Broker: Full management website for recruiters and companies
 My Landlord Club: Real-estate crowd-funding
 Tasks:
 - Written Specifications
@@ -79,7 +79,7 @@ Technologies: PHP, Chrome Extension, JavaScript, MySQL
 Projects:
 Rate Job Offer: Inventive Chrome Extension to find a job
 Crazy Tips Work: Comment and discuss on job offers have never been so simple
-Crazy Tips: Innovative solutions for discussing about real-estate investments and offers
+Crazy Tips: Innovative solution for discussing about real-estate investments and offers
 Tasks:
 - Designed and conceived an easily-maintanaible and evolutive architecture including a high-volume web-service with OAuth authentications
 - Developed content and background scripts
@@ -88,14 +88,14 @@ Tasks:
 - Developed an optimized on-the-fly URL Scanning algorithm based on Regexp and Synchronisation
 - Created an algorithm that suggest offers depending on the commented ones
 
-Web Lead Developer
+Lead Web Developer
 Brayton Global
 July 2015 - Sept 2016
 Antwerp, BE then Remote
 Intern, then Fixed-Term Contract
 Technologies: Symfony, Bootstrap, jQuery, MySQL, Trello
 Projects:
-Vemasys: The new era of Vessel Management - Fluvial Vessel ERP
+Vemasys: The new era of Vessel Management - Fluvial / Inland Vessel ERP
 SkillMatrix: Smart Applicant Tracking System for recruitment companies
 Tasks:
 - Conceived and developed a complex architecture
@@ -123,18 +123,18 @@ Bourbon-Lancy, FR
 Intern
 Technologies: WinDev, HFSQL Database, 
 Projects:
-CNH traceability tool: Developed a new application between PMS, a SAP module, and operators
+CNH traceability tool: New software involving PMS, SAP and operators
 Tasks:
 - Trained myself on technologies used at this plant
 - Analysed problems with the old application
 - Took into account new standards, partially from the direction
 - Developed a high-availability application with centralized database and automatic synchronisation for offline usage
-- Asked operators about their needs, and find new functionnalities for an easier utilization
+- Asked operators about their needs, and find new functionalities for an easier utilization
 - Developed specific views for maintenance and team managers
 - Created an algorithm to check serial numbers for error-less entries
 - Created SAP files and fetched APIs for new references
 
-Web Lead Developer
+Lead Web Developer
 Archives Départementales de l'Ain
 Nov 2013 - Mar 2014
 Bourg-en-Bresse, FR
@@ -190,7 +190,7 @@ Technologies: Python Flask, jQuery, SQLite, MDBootstrap
 
 Mobile Web Specialist
 Google
-Currently passing
+2020
 Tech Skills: Accessibility, Progressive Web Apps, Responsive, Indexed DB, Touch Events, Networking, Web Workers, Performance
 
 CS For Web Programing

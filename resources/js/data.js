@@ -230,6 +230,10 @@ const data = {
         {
           icon: 'icon icon-python',
           title: 'Python'
+        },
+        {
+          icon: 'icon icon-typescript',
+          title: 'TypeScript'
         }
       ],
       otherTechnologies: [
