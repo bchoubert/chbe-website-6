@@ -1,0 +1,429 @@
+@font-face {
+	font-family: "subset-font";
+	src: url("subset-font.eot?#iefix") format("embedded-opentype"),
+url("subset-font.woff") format("woff"),
+url("subset-font.woff2") format("woff2"),
+url("subset-font.ttf") format("truetype"),
+url("subset-font.svg#subset-font") format("svg");
+}
+
+.icon {
+	line-height: 1;
+}
+
+.icon:before {
+	font-family: subset-font !important;
+	font-style: normal;
+	font-weight: normal !important;
+	vertical-align: top;
+}
+
+.icon-ain:before {
+	content: "\f101";
+}
+.icon-air-data:before {
+	content: "\f102";
+}
+.icon-android:before {
+	content: "\f103";
+}
+.icon-angular:before {
+	content: "\f104";
+}
+.icon-anydwg:before {
+	content: "\f105";
+}
+.icon-apache:before {
+	content: "\f106";
+}
+.icon-arrow-to-bottom:before {
+	content: "\f107";
+}
+.icon-asp:before {
+	content: "\f108";
+}
+.icon-babylon-alt:before {
+	content: "\f109";
+}
+.icon-backbone:before {
+	content: "\f10a";
+}
+.icon-bc:before {
+	content: "\f10b";
+}
+.icon-bcfont-alt:before {
+	content: "\f10c";
+}
+.icon-bmw:before {
+	content: "\f10d";
+}
+.icon-bootstrap:before {
+	content: "\f10e";
+}
+.icon-braytonglobal-alt:before {
+	content: "\f10f";
+}
+.icon-brusselsaquariums:before {
+	content: "\f110";
+}
+.icon-building:before {
+	content: "\f111";
+}
+.icon-calendar:before {
+	content: "\f112";
+}
+.icon-cci:before {
+	content: "\f113";
+}
+.icon-chartjs:before {
+	content: "\f114";
+}
+.icon-check:before {
+	content: "\f115";
+}
+.icon-chrome:before {
+	content: "\f116";
+}
+.icon-cityzendesk:before {
+	content: "\f117";
+}
+.icon-cnh:before {
+	content: "\f118";
+}
+.icon-codesandbox:before {
+	content: "\f119";
+}
+.icon-cogs:before {
+	content: "\f11a";
+}
+.icon-crazytips:before {
+	content: "\f11b";
+}
+.icon-crypto-viewer:before {
+	content: "\f11c";
+}
+.icon-css-alt:before {
+	content: "\f11d";
+}
+.icon-ctw:before {
+	content: "\f11e";
+}
+.icon-cube:before {
+	content: "\f11f";
+}
+.icon-cvbroker:before {
+	content: "\f120";
+}
+.icon-database:before {
+	content: "\f121";
+}
+.icon-desktop:before {
+	content: "\f122";
+}
+.icon-django-alt:before {
+	content: "\f123";
+}
+.icon-dolcegusto-alt2:before {
+	content: "\f124";
+}
+.icon-dribbble:before {
+	content: "\f125";
+}
+.icon-enos:before {
+	content: "\f126";
+}
+.icon-envelope:before {
+	content: "\f127";
+}
+.icon-evento-alt2:before {
+	content: "\f128";
+}
+.icon-expo:before {
+	content: "\f129";
+}
+.icon-express:before {
+	content: "\f12a";
+}
+.icon-facebook-api:before {
+	content: "\f12b";
+}
+.icon-factorio:before {
+	content: "\f12c";
+}
+.icon-findanumbrella:before {
+	content: "\f12d";
+}
+.icon-firebase:before {
+	content: "\f12e";
+}
+.icon-flask:before {
+	content: "\f12f";
+}
+.icon-geosnap-alt:before {
+	content: "\f130";
+}
+.icon-gimp:before {
+	content: "\f131";
+}
+.icon-git:before {
+	content: "\f132";
+}
+.icon-github:before {
+	content: "\f133";
+}
+.icon-gitlab:before {
+	content: "\f134";
+}
+.icon-globe:before {
+	content: "\f135";
+}
+.icon-google-maps:before {
+	content: "\f136";
+}
+.icon-google:before {
+	content: "\f137";
+}
+.icon-hadoop:before {
+	content: "\f138";
+}
+.icon-harvardx-alt:before {
+	content: "\f139";
+}
+.icon-hfsql-alt:before {
+	content: "\f13a";
+}
+.icon-ideomed:before {
+	content: "\f13b";
+}
+.icon-inkscape:before {
+	content: "\f13c";
+}
+.icon-iunex-alt:before {
+	content: "\f13d";
+}
+.icon-java:before {
+	content: "\f13e";
+}
+.icon-javascript-alt:before {
+	content: "\f13f";
+}
+.icon-jquery:before {
+	content: "\f140";
+}
+.icon-laravel:before {
+	content: "\f141";
+}
+.icon-leaflet:before {
+	content: "\f142";
+}
+.icon-lets-encrypt:before {
+	content: "\f143";
+}
+.icon-linkedin-alt:before {
+	content: "\f144";
+}
+.icon-livecycle:before {
+	content: "\f145";
+}
+.icon-livementor-alt2:before {
+	content: "\f146";
+}
+.icon-logistics:before {
+	content: "\f147";
+}
+.icon-maincare-alt:before {
+	content: "\f148";
+}
+.icon-map-marker:before {
+	content: "\f149";
+}
+.icon-maplink-alt2:before {
+	content: "\f14a";
+}
+.icon-mapreduce:before {
+	content: "\f14b";
+}
+.icon-materialui:before {
+	content: "\f14c";
+}
+.icon-mdbootstrap:before {
+	content: "\f14d";
+}
+.icon-microchip:before {
+	content: "\f14e";
+}
+.icon-microsoft:before {
+	content: "\f14f";
+}
+.icon-mobile:before {
+	content: "\f150";
+}
+.icon-mongodb:before {
+	content: "\f151";
+}
+.icon-mylandlordclub:before {
+	content: "\f152";
+}
+.icon-mysql:before {
+	content: "\f153";
+}
+.icon-nodejs:before {
+	content: "\f154";
+}
+.icon-npm-alt:before {
+	content: "\f155";
+}
+.icon-openlayers:before {
+	content: "\f156";
+}
+.icon-oracle:before {
+	content: "\f157";
+}
+.icon-paint-brush:before {
+	content: "\f158";
+}
+.icon-pdt:before {
+	content: "\f159";
+}
+.icon-php:before {
+	content: "\f15a";
+}
+.icon-playstore:before {
+	content: "\f15b";
+}
+.icon-pluralsight:before {
+	content: "\f15c";
+}
+.icon-polytech-alt:before {
+	content: "\f15d";
+}
+.icon-postgre:before {
+	content: "\f15e";
+}
+.icon-poweruser:before {
+	content: "\f15f";
+}
+.icon-prestashop:before {
+	content: "\f160";
+}
+.icon-protoio-alt:before {
+	content: "\f161";
+}
+.icon-python:before {
+	content: "\f162";
+}
+.icon-qgis:before {
+	content: "\f163";
+}
+.icon-qliksense:before {
+	content: "\f164";
+}
+.icon-qlikview:before {
+	content: "\f165";
+}
+.icon-qwiklabs:before {
+	content: "\f166";
+}
+.icon-react-native:before {
+	content: "\f167";
+}
+.icon-redis:before {
+	content: "\f168";
+}
+.icon-rjo:before {
+	content: "\f169";
+}
+.icon-ruler:before {
+	content: "\f16a";
+}
+.icon-sass-alt:before {
+	content: "\f16b";
+}
+.icon-search-dollar:before {
+	content: "\f16c";
+}
+.icon-server:before {
+	content: "\f16d";
+}
+.icon-signature:before {
+	content: "\f16e";
+}
+.icon-skillmatrix-alt:before {
+	content: "\f16f";
+}
+.icon-socialmediapro-alt2:before {
+	content: "\f170";
+}
+.icon-sogelink-alt:before {
+	content: "\f171";
+}
+.icon-spring:before {
+	content: "\f172";
+}
+.icon-sqlite:before {
+	content: "\f173";
+}
+.icon-symfony-alt:before {
+	content: "\f174";
+}
+.icon-talend-alt:before {
+	content: "\f175";
+}
+.icon-tc-gannay-alt:before {
+	content: "\f176";
+}
+.icon-tc-gannay:before {
+	content: "\f177";
+}
+.icon-testflight:before {
+	content: "\f178";
+}
+.icon-three:before {
+	content: "\f179";
+}
+.icon-tomcat:before {
+	content: "\f17a";
+}
+.icon-trello:before {
+	content: "\f17b";
+}
+.icon-typescript:before {
+	content: "\f17c";
+}
+.icon-udemy:before {
+	content: "\f17d";
+}
+.icon-universitelyon:before {
+	content: "\f17e";
+}
+.icon-vdsconsulting-alt:before {
+	content: "\f17f";
+}
+.icon-velov-alt2:before {
+	content: "\f180";
+}
+.icon-vemasys-alt:before {
+	content: "\f181";
+}
+.icon-vuejs-alt:before {
+	content: "\f182";
+}
+.icon-webpack:before {
+	content: "\f183";
+}
+.icon-windev-alt:before {
+	content: "\f184";
+}
+.icon-window:before {
+	content: "\f185";
+}
+.icon-wordpress:before {
+	content: "\f186";
+}
+.icon-xd:before {
+	content: "\f187";
+}
+.icon-youtube:before {
+	content: "\f188";
+}
+

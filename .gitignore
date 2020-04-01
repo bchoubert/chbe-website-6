@@ -1,2 +1,2 @@
-resources/node_modules/
+**/node_modules/**/*
 resources/php/params.inc.php

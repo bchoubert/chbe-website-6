@@ -745,96 +745,6 @@ const data = {
       ]
     },
     {
-      title: 'Logistics',
-      description: 'Complex Logistics ERP: GPS Tracking, invoices, recruitment, maintenance...',
-      icon: 'icon icon-logistics',
-      color: '#B41B1F',
-      images: [
-        {
-          types: [
-            {
-              type: 'image/webp',
-              src: '/resources/img/projects/logistics_1.webp'
-            },
-            {
-              type: 'image/png',
-              src: '/resources/img/projects/logistics_1.png'
-            }
-          ]
-        }
-      ],
-      links: [
-        {
-          icon: 'icon icon-github',
-          link: 'https://github.com/bchoubert/logistics',
-          title: 'GitHub'
-        }
-      ],
-      technologies: [
-        {
-          icon: 'icon icon-firebase',
-          title: 'Firebase Cloud Firestore + Auth + Storage + Functions'
-        },
-        {
-          icon: 'icon icon-react',
-          title: 'React'
-        },
-        {
-          icon: 'icon icon-openlayers',
-          title: 'OpenLayers'
-        },
-        {
-          icon: 'icon icon-sass-alt',
-          title: 'Sass'
-        }
-      ]
-    },
-    {
-      title: 'E-nos',
-      description: 'Your Files and Programs, online',
-      icon: 'icon icon-enos',
-      color: '#6FAE47',
-      images: [
-        {
-          types: [
-            {
-              type: 'image/webp',
-              src: '/resources/img/projects/enos_1.webp'
-            },
-            {
-              type: 'image/png',
-              src: '/resources/img/projects/enos_1.png'
-            }
-          ]
-        }
-      ],
-      links: [
-        {
-          icon: 'icon icon-github',
-          link: 'https://github.com/Enos-project/',
-          title: 'GitHub'
-        }
-      ],
-      technologies: [
-        {
-          icon: 'icon icon-angular',
-          title: 'Angular + NG Material'
-        },
-        {
-          icon: 'icon icon-spring',
-          title: 'Java Spring'
-        },
-        {
-          icon: 'icon icon-mysql',
-          title: 'MySQL'
-        },
-        {
-          icon: 'icon icon-sass-alt',
-          title: 'Sass'
-        }
-      ]
-    },
-    {
       title: 'BC-Font',
       description: 'The Developer Font with 1,000+ icons',
       icon: 'icon icon-bcfont-alt',
@@ -932,6 +842,140 @@ const data = {
       ]
     },
     {
+      title: 'Nescafe Dolce Gusto Webstore',
+      description: 'E-commerce website to order your coffee pods & machines',
+      icon: 'icon icon-dolcegusto-alt2',
+      color: '#653800',
+      images: [
+        {
+          types: [
+            {
+              type: 'image/webp',
+              src: '/resources/img/projects/dolcegusto_1.webp'
+            },
+            {
+              type: 'image/png',
+              src: '/resources/img/projects/dolcegusto_1.png'
+            }
+          ]
+        }
+      ],
+      links: [
+        {
+          icon: 'icon icon-github',
+          link: 'https://github.com/bchoubert/dolce-gusto-webstore',
+          title: 'GitHub'
+        }
+      ],
+      technologies: [
+        {
+          icon: 'icon icon-django-alt',
+          title: 'Django'
+        },
+        {
+          icon: 'icon icon-sqlite',
+          title: 'SQLite'
+        },
+        {
+          icon: 'icon icon-react',
+          title: 'React'
+        },
+        {
+          icon: 'icon icon-materialui',
+          title: 'Material UI'
+        }
+      ]
+    },{
+      title: 'Logistics',
+      description: 'Complex Logistics ERP: GPS Tracking, invoices, recruitment, maintenance...',
+      icon: 'icon icon-logistics',
+      color: '#B41B1F',
+      images: [
+        {
+          types: [
+            {
+              type: 'image/webp',
+              src: '/resources/img/projects/logistics_1.webp'
+            },
+            {
+              type: 'image/png',
+              src: '/resources/img/projects/logistics_1.png'
+            }
+          ]
+        }
+      ],
+      links: [
+        {
+          icon: 'icon icon-github',
+          link: 'https://github.com/bchoubert/logistics',
+          title: 'GitHub'
+        }
+      ],
+      technologies: [
+        {
+          icon: 'icon icon-firebase',
+          title: 'Firebase Cloud Firestore + Auth + Storage + Functions'
+        },
+        {
+          icon: 'icon icon-react',
+          title: 'React'
+        },
+        {
+          icon: 'icon icon-openlayers',
+          title: 'OpenLayers'
+        },
+        {
+          icon: 'icon icon-sass-alt',
+          title: 'Sass'
+        }
+      ]
+    },
+    {
+      title: 'E-nos',
+      description: 'Your Files and Programs, online',
+      icon: 'icon icon-enos',
+      color: '#6FAE47',
+      images: [
+        {
+          types: [
+            {
+              type: 'image/webp',
+              src: '/resources/img/projects/enos_1.webp'
+            },
+            {
+              type: 'image/png',
+              src: '/resources/img/projects/enos_1.png'
+            }
+          ]
+        }
+      ],
+      links: [
+        {
+          icon: 'icon icon-github',
+          link: 'https://github.com/Enos-project/',
+          title: 'GitHub'
+        }
+      ],
+      technologies: [
+        {
+          icon: 'icon icon-angular',
+          title: 'Angular + NG Material'
+        },
+        {
+          icon: 'icon icon-spring',
+          title: 'Java Spring'
+        },
+        {
+          icon: 'icon icon-mysql',
+          title: 'MySQL'
+        },
+        {
+          icon: 'icon icon-sass-alt',
+          title: 'Sass'
+        }
+      ]
+    },
+    {
       title: 'Evento',
       description: 'World-wide public events, developed with multiple technologies',
       icon: 'icon icon-evento-alt2',
@@ -991,162 +1035,23 @@ const data = {
           title: 'Leaflet'
         }
       ]
-    },
-    {
-      title: 'Nescafe Dolce Gusto Webstore',
-      description: 'E-commerce website to order your coffee pods & machines',
-      icon: 'icon icon-dolcegusto-alt2',
-      color: '#653800',
-      images: [
-        {
-          types: [
-            {
-              type: 'image/webp',
-              src: '/resources/img/projects/dolcegusto_1.webp'
-            },
-            {
-              type: 'image/png',
-              src: '/resources/img/projects/dolcegusto_1.png'
-            }
-          ]
-        }
-      ],
-      links: [
-        {
-          icon: 'icon icon-github',
-          link: 'https://github.com/bchoubert/dolce-gusto-webstore',
-          title: 'GitHub'
-        }
-      ],
-      technologies: [
-        {
-          icon: 'icon icon-django-alt',
-          title: 'Django'
-        },
-        {
-          icon: 'icon icon-sqlite',
-          title: 'SQLite'
-        },
-        {
-          icon: 'icon icon-react',
-          title: 'React'
-        },
-        {
-          icon: 'icon icon-materialui',
-          title: 'Material UI'
-        }
-      ]
-    },
-    {
-      title: 'Produits du Tiroir',
-      description: 'Branding and Web Marketing Strategy, building Terroir\'s French products website',
-      icon: 'icon icon-pdt',
-      color: '#333333',
-      images: [
-        {
-          types: [
-            {
-              type: 'image/webp',
-              src: '/resources/img/projects/pdt_1.webp'
-            },
-            {
-              type: 'image/png',
-              src: '/resources/img/projects/pdt_1.png'
-            }
-          ]
-        }
-      ],
-      links: [
-        {
-          icon: 'icon icon-github',
-          link: 'https://github.com/Produits-du-Tiroir',
-          title: 'GitHub'
-        }
-      ],
-      technologies: [
-        {
-          icon: 'icon icon-prestashop',
-          title: 'PrestaShop'
-        },
-        {
-          icon: 'icon icon-wordpress',
-          title: 'WordPress'
-        },
-        {
-          icon: 'icon icon-php',
-          title: 'PHP'
-        },
-        {
-          icon: 'icon icon-facebook-api',
-          title: 'Facebook APIs'
-        },
-        {
-          icon: 'icon icon-youtube',
-          title: 'YouTube'
-        }
-      ]
-    },
-    {
-      title: 'BMW Car Configurator',
-      description: 'Complete car configurator',
-      icon: 'icon icon-bmw',
-      color: '#418DAD',
-      images: [
-        {
-          types: [
-            {
-              type: 'image/webp',
-              src: '/resources/img/projects/bmw_1.webp'
-            },
-            {
-              type: 'image/png',
-              src: '/resources/img/projects/bmw_1.png'
-            }
-          ]
-        }
-      ],
-      links: [
-        {
-          icon: 'icon icon-github',
-          link: 'https://github.com/bchoubert/car-configurator/',
-          title: 'GitHub'
-        }
-      ],
-      technologies: [
-        {
-          icon: 'icon icon-flask',
-          title: 'Python Flask'
-        },
-        {
-          icon: 'icon icon-jquery',
-          title: 'jQuery'
-        },
-        {
-          icon: 'icon icon-sqlite',
-          title: 'SQLite'
-        },
-        {
-        icon: 'icon icon-mdbootstrap',
-        title: 'MDBootstrap'
-        }
-      ]
     }
   ],
   services: [
     {
       title: 'Solid experience in Web Development (first professional website in 2006)',
-      icon: 'fa-window'
+      icon: 'icon icon-window'
     },
     {
       title: 'Strong knowledge of both Graphic & UI Design',
-      icon: 'fa-ruler'
+      icon: 'icon icon-ruler'
     }
   ],
   skills: [
     {
       title: 'Front-End',
       expertise: true,
-      icon: 'fa-desktop',
+      icon: 'icon icon-desktop',
       technologies: [
         {
           icon: 'icon icon-css-alt',
@@ -1174,7 +1079,7 @@ const data = {
     {
       title: 'Back-End',
       expertise: true,
-      icon: 'fa-cogs',
+      icon: 'icon icon-cogs',
       technologies: [
         {
           icon: 'icon icon-java',
@@ -1202,7 +1107,7 @@ const data = {
     {
       title: 'UI Design',
       expertise: true,
-      icon: 'fa-paint-brush',
+      icon: 'icon icon-paint-brush',
       technologies: [
         {
           icon: 'icon icon-xd',
@@ -1238,7 +1143,7 @@ const data = {
     {
       title: 'Web Marketing',
       expertise: false,
-      icon: 'fa-search-dollar',
+      icon: 'icon icon-search-dollar',
       list: [
         'Google Analytics',
         'Call-To-Action',
@@ -1252,7 +1157,7 @@ const data = {
     {
       title: 'Databases',
       expertise: false,
-      icon: 'fa-database',
+      icon: 'icon icon-database',
       technologies: [
         {
           icon: 'icon icon-mysql',
@@ -1291,7 +1196,7 @@ const data = {
     {
       title: 'Ops',
       expertise: false,
-      icon: 'fa-server',
+      icon: 'icon icon-server',
       technologies: [
         {
           icon: 'icon icon-apache',
@@ -1310,7 +1215,7 @@ const data = {
     {
       title: 'Machine Learning',
       expertise: false,
-      icon: 'fa-microchip',
+      icon: 'icon icon-microchip',
       technologies: [
         {
           icon: 'icon icon-hadoop',
@@ -1333,7 +1238,7 @@ const data = {
     {
       title: 'Mobile',
       expertise: false,
-      icon: 'fa-mobile',
+      icon: 'icon icon-mobile',
       technologies: [
         {
           icon: 'icon icon-android',

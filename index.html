@@ -13,96 +13,70 @@
 
         <title>Bertrand CHOUBERT's Porfolio - Web Developer and UI Designer</title>
 
-        <link rel="preload" as="script" href="resources/node_modules/fullpage.js/dist/fullpage.min.js" />
+        <link rel="preload" as="style" href="resources/css/style.min.css" onload="this.rel = 'stylesheet'" />
+        <link rel="preload" as="style" href="resources/js/icon-subset/dist/subset-font.css" onload="this.rel = 'stylesheet'" />
 
-        <link rel="preload" as="style" href="resources/node_modules/bc-font/dist/bc-font.css" onload="this.rel='stylesheet'" />
-        <link rel="preload" as="style" href="resources/node_modules/fullpage.js/dist/fullpage.min.css" onload="this.rel='stylesheet'" />
+        <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" onload="this.rel = 'stylesheet'" />
 
-        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
-
-        <link rel="stylesheet" href="resources/css/style.min.css" />
-
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" />
-
-        <link rel="stylesheet" href="resources/node_modules/@fortawesome/fontawesome-pro/css/fontawesome.min.css" />
-        <link rel="stylesheet" href="resources/node_modules/@fortawesome/fontawesome-pro/css/solid.min.css" />
         <link rel="icon" type="image/png" href="resources/img/favicon.png" />
         <link rel="manifest" href="manifest.json" />
     </head>
-
     <body>
-        <nav>
-            <a class="nav-action nav-action-reverse" onclick="UTILS.move('header')">
-                <i class="icon icon-bc"></i>
-            </a>
-            <span class="nav-separator">Bertrand Choubert</span>
-            <a class="nav-action nav-action-large" href="resources/Resume_Bertrand_Choubert.pdf" title="Download Resume" target="_blank">
-                <i class="fas fa-arrow-to-bottom"></i>
-                <span class="nav-label xl-only">Resume</span>
+        <nav class="nav">
+            <a href="#"><i class="icon icon-bc"></i></a>
+            <span class="xl-only">Bertrand Choubert</span>
+            <span class="nav-separator"></span>
+            <a id="nav-resume-link" class="nav-large" href="resources/Resume_Bertrand_Choubert.pdf" title="Download Resume" target="_blank">
+                <i class="icon icon-arrow-to-bottom"></i>
+                <span class="xl-only">Resume</span>
                 <span class="sr-only">Download my resume</span>
             </a>
-            <a id="nav-contact-link" class="nav-action nav-action-reverse nav-action-large" onclick="UTILS.move('contact')">
-                <i class="fas fa-envelope"></i>
-                <span class="nav-label xl-only">Contact</span>
+            <a class="nav-large" href="#contact">
+                <i class="icon icon-envelope"></i>
+                <span class="xl-only">Contact</span>
+                <span class="sr-only">Contact me</span>
             </a>
         </nav>
-        <div id="fullpage">
-            <section data-anchor="header">
-                <i class="icon icon-bc"></i>
-                <h1>Bertrand Choubert</h1>
-                <h3>Web Developer that felt in love with UI Design</h3>
-                <ul id="networks"></ul>
-                <div>
-                    <a class="btn cta-primary" onclick="UTILS.move('contact')">
-                        <i class="fas fa-envelope"></i>
-                        Contact me
-                    </a>
-                    <a class="btn cta-secondary" href="resources/Resume_Bertrand_Choubert.pdf" target="_blank">
-                        <i class="fas fa-arrow-to-bottom"></i>
-                        Download Resume
-                    </a>
-                </div>
-                <span id="mice"></span>
-            </section>
-            <section data-anchor="services">
+        <main>
+            <section id="profile">
                 <h1>Profile</h1>
-                <p>
-                    Design, development, management and organization, that is my definition of IT.<br/><br/>
-                    By nature, I have perseverance, and I'm rigorous, enthusiastic, never fully satisfied, and always listening. I began web development at 12, which is now my preferred field.
-                    I am currently a French CS Engineer. I'm trained to develop innovative websites in modern languages.
-                    I train myself with a lot of online trainings, because Front-End technologies change every day.<br/><br/>
-                    Passionate about IT, but also aeronautics and music creation, I am interested in innovation in multiple fields, which permits me to learn new things about them! 
-                </p>
-                <h1>Expertise</h1>
-                <ul id="services-list" class="datalist--vertical"></ul>
+                <img src="resources/img/profile.jpg"/>
+                <div>
+                    <span>Hi! I'm Bertrand Choubert, a Web Developer that felt in love with UI Design.</span>
+                    <p>
+                        Design, development, management and organization, that is my definition of IT.<br/><br/>
+                        By nature, I have perseverance, and I'm rigorous, enthusiastic, never fully satisfied, and always listening. I began web development at 12, which is now my preferred field.
+                        I am currently a French CS Engineer. I'm trained to develop innovative websites in modern languages.
+                        I train myself with a lot of online trainings, because Front-End technologies change every day.<br/><br/>
+                        Passionate about IT, but also aeronautics and music creation, I am interested in innovation in multiple fields, which permits me to learn new things about them! 
+                    </p>
+                </div>
             </section>
-            <section data-anchor="skills">
-                <h1>Skills</h1>
-                <ul id="skills-list" class="datalist--vertical"></ul>
-            </section>
-            <section data-anchor="shots">
+            <section id="shots">
                 <h1>Recent Shots</h1>
-                <ul id="shots-list" class="datalist--horizontal"></ul>
+                <ul id="shots-list"></ul>
             </section>
-            <section data-anchor="projects">
-                <div class="slide">
-                    <h1>Main Side Projects</h1>
-                    <ul id="projects-list" class="datalist--vertical"></ul>
-                </div>
+            <section id="projects">
+                <h1>Main Side Projects</h1>
+                <ul id="projects-list"></ul>
             </section>
-            <section data-anchor="experience">
-                <div class="slide">
-                    <h1>Experience</h1>
-                    <ul id="experience-list" class="datalist--vertical"></ul>
-                </div>
+            <section id="experience">
+                <h1>Experience</h1>
+                <ul id="experience-list"></ul>
             </section>
-            <section data-anchor="education">
-                <div class="slide">
-                    <h1>Education</h1>
-                    <ul id="education-list" class="datalist--vertical"></ul>
-                </div>
+            <section id="services">
+                <h1>Expertise</h1>
+                <ul id="services-list"></ul>
             </section>
-            <section data-anchor="contact">
+            <section id="skills">
+                <h1>Skills</h1>
+                <ul id="skills-list"></ul>
+            </section>
+            <section id="education">
+                <h1>Education</h1>
+                <ul id="education-list"></ul>
+            </section>
+            <section id="contact">
                 <h1>Contact me</h1>
                 <div class="contact-form">
                     <div class="xl-flex">
@@ -127,10 +101,8 @@
                     <span class="btn cta-primary" tabindex="0" onclick="UTILS.sendEmail()">Send message</span>
                 </div>
             </section>
-        </div>
+        </main>
 
-        <script type="text/javascript" src="resources/node_modules/fullpage.js/vendors/scrolloverflow.min.js"></script>
-        <script type="text/javascript" src="resources/node_modules/fullpage.js/dist/fullpage.min.js"></script>
         <script type="text/javascript" src="resources/js/params.inc.js"></script>
         <script type="text/javascript" src="resources/js/data.js"></script>
         <script type="text/javascript" src="resources/js/script.js"></script>
@@ -144,7 +116,5 @@
             gtag('config', 'UA-82368304-2');
         </script>
 
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
-        <script type="text/javascript">Calendly.initBadgeWidget({ url: 'https://calendly.com/bchoubert/1-1', text: 'Schedule time with me', color: '#555555', textColor: '#ffffff', branding: true });</script>
     </body>
 </html>
