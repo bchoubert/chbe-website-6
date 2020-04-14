@@ -13,59 +13,44 @@
 
         <title>Bertrand CHOUBERT's Porfolio - Web Developer and UI Designer</title>
 
-        <link rel="preload" as="script" href="resources/node_modules/fullpage.js/dist/fullpage.min.js" />
+        <link rel="preload" as="style" href="resources/js/custom-font/dist/chbe-font.css" onload="this.rel='stylesheet'" />
 
-        <link rel="preload" as="style" href="resources/node_modules/bc-font/dist/bc-font.css" onload="this.rel='stylesheet'" />
-        <link rel="preload" as="style" href="resources/node_modules/fullpage.js/dist/fullpage.min.css" onload="this.rel='stylesheet'" />
-
-        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+        <link rel="stylesheet" href="resources/node_modules/aos/dist/aos.css" />
 
         <link rel="stylesheet" href="resources/css/style.min.css" />
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" />
 
-        <link rel="stylesheet" href="resources/node_modules/@fortawesome/fontawesome-pro/css/fontawesome.min.css" />
-        <link rel="stylesheet" href="resources/node_modules/@fortawesome/fontawesome-pro/css/solid.min.css" />
         <link rel="icon" type="image/png" href="resources/img/favicon.png" />
         <link rel="manifest" href="manifest.json" />
     </head>
-
     <body>
-        <nav>
-            <a class="nav-action nav-action-reverse" onclick="UTILS.move('header')">
+        <nav class="Nav">
+            <a class="Nav-logo" href="#anchor_header">
                 <i class="icon icon-bc"></i>
             </a>
-            <span class="nav-separator">Bertrand Choubert</span>
-            <a class="nav-action nav-action-large" href="resources/Resume_Bertrand_Choubert.pdf" title="Download Resume" target="_blank">
-                <i class="fas fa-arrow-to-bottom"></i>
-                <span class="nav-label xl-only">Resume</span>
-                <span class="sr-only">Download my resume</span>
+            <span class="Nav-title">Bertrand Choubert</span>
+            <a href="resources/Resume_Bertrand_Choubert.pdf" title="Download Resume" target="_blank">
+                <i class="icon icon-file-user"></i>
             </a>
-            <a id="nav-contact-link" class="nav-action nav-action-reverse nav-action-large" onclick="UTILS.move('contact')">
-                <i class="fas fa-envelope"></i>
-                <span class="nav-label xl-only">Contact</span>
+            <a id="nav-contact-link" href="#anchor_contact">
+                <i class="icon icon-envelope"></i>
             </a>
         </nav>
-        <div id="fullpage">
-            <section data-anchor="header">
-                <i class="icon icon-bc"></i>
-                <h1>Bertrand Choubert</h1>
-                <h3>Web Developer that felt in love with UI Design</h3>
-                <ul id="networks"></ul>
-                <div>
-                    <a class="btn cta-primary" onclick="UTILS.move('contact')">
-                        <i class="fas fa-envelope"></i>
-                        Contact me
-                    </a>
-                    <a class="btn cta-secondary" href="resources/Resume_Bertrand_Choubert.pdf" target="_blank">
-                        <i class="fas fa-arrow-to-bottom"></i>
-                        Download Resume
-                    </a>
+        <main>
+            <header class="Header scene" id="anchor_header">
+                <img class="Header-shape" data-depth="0.1" src="resources/img/shape.svg" />
+                <div class="Header-hi" data-depth="-0.6">Hi!</div>
+                <div class="Header-desc" data-depth="0.2">
+                    <span data-aos="fade-left" data-aos-delay="200">I'm Bertrand Choubert.</span>
+                    <span data-aos="fade-left" data-aos-delay="700">A Web Developer who felt in love with UI Design.</span>
                 </div>
-                <span id="mice"></span>
-            </section>
-            <section data-anchor="services">
-                <h1>Profile</h1>
+            </header>
+            <div data-aos="fade" class="transition transition-left" style="background-color: #FFE400;"><i style="background-color: #FFFA75;"></i></div>
+            <section class="Section Section-profile" data-aos="fade">
+                <div class="section-title">
+                    <h1>Profile</h1>
+                </div>
                 <p>
                     Design, development, management and organization, that is my definition of IT.<br/><br/>
                     By nature, I have perseverance, and I'm rigorous, enthusiastic, never fully satisfied, and always listening. I began web development at 12, which is now my preferred field.
@@ -73,67 +58,81 @@
                     I train myself with a lot of online trainings, because Front-End technologies change every day.<br/><br/>
                     Passionate about IT, but also aeronautics and music creation, I am interested in innovation in multiple fields, which permits me to learn new things about them! 
                 </p>
-                <h1>Expertise</h1>
-                <ul id="services-list" class="datalist--vertical"></ul>
             </section>
-            <section data-anchor="skills">
-                <h1>Skills</h1>
-                <ul id="skills-list" class="datalist--vertical"></ul>
+            <div data-aos="fade" class="transition transition-right" style="background-color: #FFFA75;"><i style="background-color: #FFFFFF;"></i></div>
+            <section class="Section Section-expertise" data-aos="fade">
+                <div class="section-title">
+                    <h1>Expertise</h1>
+                </div>
+                <ul id="expertise-list"></ul>
             </section>
-            <section data-anchor="shots">
-                <h1>Recent Shots</h1>
-                <ul id="shots-list" class="datalist--horizontal"></ul>
+            <div data-aos="fade" class="transition transition-left" style="background-color: #FFFFFF;"><i style="background-color: #EEEEEE;"></i></div>
+            <section class="Section Section-projects" data-aos="fade">
+                <div class="section-title">
+                    <h1>Main Projects</h1>
+                </div>
+                <div class="content"></div>
             </section>
-            <section data-anchor="projects">
-                <div class="slide">
-                    <h1>Main Side Projects</h1>
-                    <ul id="projects-list" class="datalist--vertical"></ul>
+            <div data-aos="fade" class="transition transition-right" style="background-color: #EEEEEE;"><i style="background-color: #FFE400;"></i></div>
+            <section class="Section Section-more" data-aos="fade">
+                <div class="content center-content">
+                    <button onclick="UTILS.triggerMorePopup()">More about me!</button>
                 </div>
             </section>
-            <section data-anchor="experience">
-                <div class="slide">
-                    <h1>Experience</h1>
-                    <ul id="experience-list" class="datalist--vertical"></ul>
+            <div data-aos="fade" class="transition transition-left" style="background-color: #FFE400;"><i style="background-color: #FFFFFF;"></i></div>
+            <section class="Section Section-contact" data-aos="fade" id="anchor_contact">
+                <div class="section-title">
+                    <h1>Contact</h1>
                 </div>
-            </section>
-            <section data-anchor="education">
-                <div class="slide">
-                    <h1>Education</h1>
-                    <ul id="education-list" class="datalist--vertical"></ul>
-                </div>
-            </section>
-            <section data-anchor="contact">
-                <h1>Contact me</h1>
-                <div class="contact-form">
-                    <div class="xl-flex">
-                        <div class="input-group">
+                <div class="Section-contact-form">
+                    <div class="flex-container my">
+                        <div class="input-group fl1 mx">
                             <label for="name">Your name</label>
                             <input id="name" autocomplete="name" type="text" placeholder="John Doe" />
                         </div>
-                        <div class="input-group">
+                        <div class="input-group fl1 mx">
                             <label for="email">Your email address</label>
                             <input id="email" type="email" autocomplete="email" placeholder="john.doe@mail.com" />
                         </div>
                     </div>
-                    <div>
-                        <div class="input-group">
+                    <div class="flex-container my">
+                        <div class="input-group fl1 mx">
                             <label for="message">Your message</label>
                             <textarea id="message" autocomplete="off" rows="10"></textarea>
                         </div>
                     </div>
-                    <div>
+                    <div class="content center-content my">
                         <span class="form-result"></span>
                     </div>
-                    <span class="btn cta-primary" tabindex="0" onclick="UTILS.sendEmail()">Send message</span>
+                    <span class="btn btn-inverse" tabindex="0" onclick="UTILS.sendEmail()">Send message</span>
                 </div>
             </section>
+            <footer class="Section Section-footer">
+                <div class="content my center-content">
+                    Designed and Developed by Bertrand Choubert, 2020
+                </div>
+            </footer>
+        </main>
+        <div class="popup" aria-live="assertive">
+            <div class="popup-bar">
+                <span class="popup-logo">
+                    <i class="icon icon-bc"></i>
+                </span>
+                <span class="popup-bar-separator"></span>
+                <span class="popup-close">
+                    <i class="icon icon-times"></i>
+                    <span class="sr-only">Close popup</span>
+                </span>
+            </div>
+            <div class="popup-content"></div>
         </div>
 
-        <script type="text/javascript" src="resources/node_modules/fullpage.js/vendors/scrolloverflow.min.js"></script>
-        <script type="text/javascript" src="resources/node_modules/fullpage.js/dist/fullpage.min.js"></script>
         <script type="text/javascript" src="resources/js/params.inc.js"></script>
+        <script type="text/javascript" src="resources/node_modules/parallax-js/dist/parallax.min.js"></script>
+        <script type="text/javascript" src="resources/node_modules/aos/dist/aos.js"></script>
         <script type="text/javascript" src="resources/js/data.js"></script>
         <script type="text/javascript" src="resources/js/script.js"></script>
+
 
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-82368304-2"></script>
         <script>
@@ -143,8 +142,8 @@
 
             gtag('config', 'UA-82368304-2');
         </script>
-
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
-        <script type="text/javascript">Calendly.initBadgeWidget({ url: 'https://calendly.com/bchoubert/1-1', text: 'Schedule time with me', color: '#555555', textColor: '#ffffff', branding: true });</script>
+        <script>
+            AOS.init();
+        </script>
     </body>
 </html>

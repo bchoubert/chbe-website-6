@@ -1,8 +1,12 @@
 'use strict';
 
 const BASE_URL = '';
-
 const EMAIL_URL = BASE_URL + '/resources/php/send.php';
+
+let POPUP = null;
+let POPUP_CONTENT = null;
+
+let DRIBBBLE_SHOTS = null;
 
 const UTILS = {
     sendEmail: () => {
@@ -38,7 +42,7 @@ const UTILS = {
                         }
                         return Promise.resolve(res);
                     })
-                    .then(data => {
+                    .then(_ => {
                         document.querySelector('.form-result').innerHTML = 'Message sent!';
                         document.querySelector('.form-result').classList.remove('form-result--error');
                         document.querySelector('.form-result').classList.add('form-result--success');
@@ -51,236 +55,191 @@ const UTILS = {
                     });
             })
             .catch(err => console.error('Error sending email: ' + err));
+    },
+    triggerMorePopup: () => {
+        POPUP_CONTENT.innerHTML = TEMPLATES.more(data.education, data.certifications, data.experience, data.skills);
+        POPUP.classList.add('popup--deployed');
+        POPUP_CONTENT.scrollTop = 0;
+    },
+    triggerProjectPopup: projectKey => {
+        const project = data.projects.filter(p => p.key === projectKey)[0];
+        if(!project) { console.error(`Can't find the project ${projectKey}`); }
+        POPUP_CONTENT.innerHTML = TEMPLATES.projectDetails(project);
+        POPUP.classList.add('popup--deployed');
+        POPUP_CONTENT.scrollTop = 0;
+    },
+    fetchDribbbleShots: () => {
+        return new Promise((resolve, reject) => {
+            if(!!DRIBBBLE_SHOTS) {
+                resolve(DRIBBBLE_SHOTS);
+                return;
+            }
+            fetch(`https://api.dribbble.com/v2/user/shots?access_token=${KEYS.DRIBBBLE_ACCESS_TOKEN}&per_page=1000`)
+                .then(res => {
+                    if(!!res.ok) {
+                        return Promise.resolve(res);
+                    }
+                    throw Error('HTTP Error');
+                })
+                .then(data => data.json())
+                .then(json => {
+                    DRIBBBLE_SHOTS = json;
+                    resolve(json);
+                })
+                .catch(err => {
+                    console.error(err);
+                    reject(err);
+                });
+        });        
+    },
+    printDribbbleShotsForProjectId: projectId => {
+        UTILS.fetchDribbbleShots().then(shots => {
+            let dribbbleContainer = document.querySelector('.Project-dribbble-images');
+            if(!!dribbbleContainer) {
+                dribbbleContainer.innerHTML = shots.filter(s => s.projects.map(p => p.id).includes(projectId)).map(s => `
+                    <img class="w-100 my" style="border-radius: 4px; background-color: white" src="${s.images.hidpi}" />
+                `).join('');
+            }
+        });
     }
 };
 
 const TEMPLATES = {
-    experience: (exp, i) => `<li class="more" onclick="UTILS.move('experience', ${i + 1})">
-        <h4>${exp.title}</h4>
-        ${exp.company}
-        <i class="more-icon fas fa-plus"></i>
-    </li>`,
-    education: (edu, i, arr) => `<li class="more ${i === arr.length - 1 ? 'no-link' : ''}" onclick="UTILS.move('education', ${i + 1})">
-        <h4>${edu.title}</h4>
-        ${edu.school} <i class="dot"></i> ${edu.dates.yEnd}
-        <i class="more-icon fas fa-plus"></i>
-    </li>`,
-    certificaton: cert => `<li>
-        ${!!cert.title ? `
-            <h4>${cert.title}</h4>
-            ${cert.organism}
-        ` : `
-            <h4>${cert.organism}</h4>
-        `}
-    </li>`,
-    network: net => `<li>
-        <a href="${net.link}" title="${net.name}" target="_blank" rel="noopener noreferrer">
-            <i class="${net.icon}"></i>
-            <span class="sr-only">${net.name}</span>
-        </a>
-    </li>`,
-    navNetwork: net => `<a class="nav-action nav-action-reverse xl-only" href="${net.link}" target="_blank" style="background-color: ${net.color}" title="${net.name}" rel="noopener noreferrer">
+    navNetwork: net => `<a href="${net.link}" target="_blank" title="${net.name}" rel="noopener noreferrer">
         <i class="${net.icon}"></i>
         <span class="sr-only">${net.name}</span>
     </a>`,
-    service: s => `<li class="no-link with-icon">
-        <i class="li-icon fas ${s.icon} fa-fw"></i>
-        <span>${s.title}</span>
-    </li>`,
-    skill: s => `<li class="no-link with-icon">
-        <i class="li-icon fas ${s.icon} fa-fw"></i>
-        <h4>${s.title}</h4>
-        ${!!s.technologies ? s.technologies.map(t => `${t.title}`).join(', ') : ''}
-        ${!!s.technologies && !!s.list ? '<br/>' : ''}
-        ${!!s.list ? `${s.list.join(', ')}` : ''}
-    </li>`,
-    shot: s => `<li class="li-shot">
-        <a href="${s.html_url}" target="_blank" rel="noopener noreferrer">
-            <img src="${s.images.normal}" alt="${s.title}" title="${s.title}" />
-        </a>
-    </li>`,
-    project: (p, i) => `<li class="no-link with-icon more" onclick="UTILS.move('projects', ${i + 1})">
-        <i class="li-icon ${p.icon}"></i>
-        <h4>${p.title}</h4>
-        ${p.description}
-        <i class="more-icon fas fa-plus"></i>
-    </li>`
-};
-
-const DETAILS_TEMPLATES = {
-    experience: exp => `
-        <div class="slide">
-            <div class="slide-row">
-                <span class="back-link" onclick="UTILS.move('experience', 0)">
-                    <i class="fas fa-arrow-circle-left"></i>
-                    Back
-                </span>
-                <div class="slide-content">
-                    <h2 style="color: ${exp.color}">
-                        <i class="${exp.icon}"></i>
-                        ${exp.title}
-                    </h2>
-                    <span>
-                        <i class="fas fa-building"></i>
-                        ${exp.company}
-                    </span>
-                    <span>
-                        <i class="fas fa-map-marker"></i>
-                        ${exp.location}
-                    </span>
-                    <span>
-                        <i class="fas fa-calendar"></i>
-                        ${exp.dates.start} - ${exp.dates.end}
-                    </span>
-                    <span>
-                        <i class="fas fa-signature"></i>
-                        ${exp.contract}
-                    </span>
-                    <span>
-                        <h4>
-                            <i class="fas fa-cogs"></i>
-                            Technologies
-                            <span class="decoration" style="background-color: ${exp.color}"></span>
-                        </h4>
-                        <ul>
-                            ${exp.mainTechnologies.map(tech => `<li>
-                                <i class="${tech.icon}"></i>
-                                ${tech.title}
-                            </li>`).join('')}
-
-                            ${exp.otherTechnologies.map(tech => `<li class="other">
-                                <i class="${tech.icon}"></i>
-                                ${tech.title}
-                            </li>`).join('')}
-                        </ul>
-                    </span>
+    project2: p => `
+        <div class="Project2" onclick="UTILS.triggerProjectPopup('${p.key}')">
+            <img src="${p.mobile}" />
+            <div class="Project2-overlay">
+                <div class="Project2-view">
+                    <h3 class="text-shadow" style="color: ${p.color};">
+                        <i class="${p.icon}"></i> ${p.title}
+                    </h3>
+                    ${!!p.wip ? `<span class="wip-indicator" style="background-color: ${p.color}"><span>WIP</span></span>` : ''}
                 </div>
-                <div class="slide-side">
-                    <h4>
-                        <i class="fas fa-cube"></i>
-                        Projects
-                        <span class="decoration" style="background-color: ${exp.color}"></span>
-                    </h4>
-                    <ul class="datalist--vertical">
-                        ${exp.projects.map(proj => `
-                        <li class="with-icon no-link">
-                            <i class="li-icon ${proj.icon}"></i>
-                            <h4>${proj.name}</h4><br/>
-                            ${proj.description}
-                        </li>`).join('')}
-                    </ul>
-                    <h4>
-                        <i class="fas fa-check"></i>
-                        Tasks
-                        <span class="decoration" style="background-color: ${exp.color}"></span>
-                    </h4>
-                    <ul class="datalist--vertical">
-                        ${exp.tasks.map(task => `<li class="no-link">
-                            ${task}
-                        </li>`).join('')}
-                    </ul>
-                </div>
-            </div>
-        </div>`,
-    education: edu => `
-        <div class="slide">
-            <div class="slide-row">
-                <span class="back-link" onclick="UTILS.move('education', 0)">
-                    <i class="fas fa-arrow-circle-left"></i>
-                    Back
-                </span>
-                <div class="slide-content">
-                    <h2 style="color: ${edu.color}">
-                        <i class="${edu.icon}"></i>
-                        ${edu.title}
-                    </h2>
-                    <span>
-                        <i class="fas fa-building"></i>
-                        ${edu.school}
+                <div class="Project2-view">
+                    <span class="w-100" style="color: white; background-color: ${p.color}; border-top: 1px solid white; border-bottom: 1px solid white">
+                        View details
                     </span>
-                    <span>
-                        <i class="fas fa-map-marker"></i>
-                        ${edu.location}
-                    </span>
-                    <span>
-                        <i class="fas fa-calendar"></i>
-                        ${edu.dates.start} - ${edu.dates.end}
-                    </span>
-                </div>
-                <div class="slide-side">
-                    ${(!!edu.details && !!edu.details.skills) ?
-                        edu.details.skills.map(sk => `
-                            <h4>
-                                ${sk.title}
-                                <span class="decoration" style="background-color: ${edu.color}"></span>
-                            </h4>
-                            <ul>${sk.list.map(sku => `<li>${sku}</li>`).join('')}</ul>
-                        `).join('') : '' }
                 </div>
             </div>
         </div>
     `,
-    project: p => `
-        <div class="slide">
-            <div class="slide-row">
-                <span class="back-link" onclick="UTILS.move('projects', 0)">
-                    <i class="fas fa-arrow-circle-left"></i>
-                    Back
-                </span>
-                <div class="slide-content">
-                    <h2 style="color: ${p.color}">
-                        <i class="${p.icon}"></i>
-                        ${p.title}
-                    </h2>
-                    <span>${p.description}</span>
-                    <span class="link-group">
-                        ${!!p.website ? `<a href="${p.website}" target="_blank" aria-label="live website" style="background-color: ${p.color}" rel="noopener noreferrer">
-                            <i class="fas fa-globe"></i>
-                            Live
-                        </a>` : ''}
-                        ${p.links.map(l => `<a href="${l.link}" target="_blank" aria-label="${l.title}" style="background-color: ${p.color}" rel="noopener noreferrer">
-                            <i class="${l.icon}"></i>
-                            ${l.title}
-                        </a>`).join('')}
-                    </span>
-                    <h4>
-                        <i class="fas fa-cogs"></i>
-                        Technologies 
-                        <span class="decoration" style="background-color: ${p.color}"></span>
-                    </h4>
-                    <ul>
-                        ${p.technologies.map(t => `<li>
-                            <i class="${t.icon}"></i>
-                            ${t.title}
-                        </li>`).join('')}
-                    </ul>
+    projectDetails: p => {
+        UTILS.printDribbbleShotsForProjectId(p.dribbbleProject);
+        return `<div class="content Project-header my">
+            <span class="center-content py px" style="background-color: ${p.color}; color: white">
+                <h2>
+                    <i class="${p.icon}"></i>
+                    ${p.title}
+                </h2>
+            </span>
+            <div class="flex-container my">
+                <div class="fl1 mx">
+                    <img class="Project-header-image" src="${p.mobile}" style="border: 1px solid ${p.color}" />
                 </div>
-                <a href="${BASE_URL + p.images[0].types[1].src}" target="_blank" class="slide-side" style="background-image: url('${BASE_URL + p.images[0].types[0].src}')" rel="noopener noreferrer">
-                    <span class="sr-only">${p.title} Preview</span>
-                </a>
+                <div class="fl1 mx">
+                    <h3 style="color: ${p.color}; text-align: left" class="my">Description</h3>
+                    <div class="content">${p.description}</div>
+                    <h3 style="color: ${p.color}; text-align: left" class="my">Tags</h3>
+                    <div class="content">
+                        ${p.tags.map(t => `<div class="Project-tag" style="border-color: ${p.color}">${t}</div>`).join('')}
+                    </div>
+                    <h3 style="color: ${p.color}; text-align: left" class="my">Main Technologies</h3>
+                    <div class="content">
+                        ${p.technologies.map(t => `<div class="Project-tech" style="border-color: ${p.color}"><i class="${t.icon}"></i> ${t.title}</div>`).join('')}
+                    </div>
+                    <h3 style="color: ${p.color}; text-align: left" class="my">Links</h3>
+                    ${p.links.map(l => `<a href="${l.link}" target="_blank" rel="noopener noreferrer" class="Project-link" style="background-color: ${p.color}">
+                        <span><i class="${l.icon}"></i></span>
+                        <span>${l.title}</span>
+                    </a>`).join('')}
+                </div>
             </div>
         </div>
-    `
+        ${p.details.map(d => `<div class="Project-detail">
+            <h3 style="flex: 0 0 20%; white-space: pre-wrap; word-break: break-word; color: ${p.color}; text-align: left">${d.title}</h3>
+            <div style="flex: 1">${d.content}</div>
+        </div>`).join('')}
+        <div class="py Project-dribbble center-content" style="background-image: linear-gradient(to bottom right, ${p.color}, ${p.lighten})">
+            <h3 style="color: white"><i class="icon icon-dribbble"></i> Dribbble Project</h3>
+            <div class="mx Project-dribbble-images"></div>
+        </div>`
+    },
+    expertise: e => `<li>
+        <h3><i class="icon ${e.icon}"></i> ${e.title}</h3>
+        <span>${e.description}</span>
+    </li>`,
+    more: (education, certifications, experience, skills) => `<div class="content">
+        <h2>Education</h2>
+        ${education.map(e => `<div class="indicator-parent my">
+            <span class="indicator" style="background-color: ${e.color}; color: white"><i class="${e.icon}"></i></span>
+            <span>
+                ${e.title} <span class="sub">/ ${e.school} / ${e.dates.yEnd}<br/>
+                    ${e.description}
+                        ${e.details.skills.map(d => `<span class="d-block my">${d.title}: 
+                            ${d.list.join(', ')}
+                        </span>`).join('')}
+                    </span>                
+            </span>
+        </div>`).join('')}
+        <h2>Certifications</h2>
+        <div class="flex-wrap-container">
+            ${certifications.map(c => `<div class="indicator-parent my flb50">
+                <span class="indicator" style="background-color: ${c.color}; color: white"><i class="${c.icon}"></i></span>
+                <span>${c.organism}<br/>${!!c.title ? c.title : ''}</span>
+            </div>`).join('')}
+        </div>
+        <h2>Skills</h2>
+        ${skills.map(s => `
+            <div class="indicator-parent my">
+                <span class="indicator ${!!s.expertise ? 'indicator-big' : ''}" style="background-color: ${s.color}; color: white">
+                    <i class="${s.icon}" ${!!s.expertise ? `style="font-size: 2rem"` : ''}></i>
+                </span>
+                <span><h3 style="text-align: left">${s.title}</h3>
+                    ${!!s.expertise ? s.description : ''}
+                    ${!!s.list ? `<span class="sub d-block mb">
+                        ${s.list.join(', ')}
+                    </span>` : ''}
+                    ${!!s.technologies ? `<span class="sub d-block mb">
+                        ${s.technologies.map(t => `<span>
+                            ${!!t.icon ? `<i class="${t.icon}"></i>` : ''}
+                            ${t.title}
+                        </span>`).join(', ')}
+                    </span>` : ''}
+                </span>
+            </div>
+        `).join('')}
+        <h2>Experience</h2>
+        ${experience.map(e => `<div class="indicator-parent my">
+            <span class="indicator indicator-big" style="background-color: ${e.color}; color: white">
+                <i class="${e.icon}" style="font-size: 2.5rem"></i>
+            </span>
+            <span><h3 style="display: inline">${e.title}</h3> @ ${e.company}<br/>
+                <span class="sub d-block">
+                    ${e.location} - ${e.contract} / ${e.dates.start} > ${e.dates.end}
+                </span>
+                <h3 style="text-align: left">Projects</h3>
+                ${e.projects.map(p => `<div class="indicator-parent my">
+                    <span class="indicator" style="background-color: ${e.color}; color: white"><i class="${p.icon}"></i></span>
+                    <span>${p.name}<span class="ssub d-block">${p.description}</span></span>
+                </div>`).join('')}
+                <h3 style="text-align: left">Tasks</h3>
+                <ul>
+                    ${e.tasks.map(t => `<li>${t}</li>`).join('')}
+                </ul>
+                <h3 style="text-align: left">Technologies</h3>
+                ${e.mainTechnologies.map(t => `<span class="indicator my" title="${t.title}" style="background-color: ${e.color}; color: white">
+                    <i class="${t.icon}"></i></span>`).join('')}
+                ${e.otherTechnologies.map(t => `<span class="indicator my" title="${t.title}" style="color: ${e.color}">
+                    <i class="${t.icon}"></i></span>`).join('')}
+            </span>
+        </div>`).join('')}
+    </div>`
 };
 
-const initFullPage = () => new fullpage('#fullpage', {
-    licenseKey: KEYS.FULLPAGE,
-    autoScrolling: true,
-    sectionSelector: 'section',
-    normalScrollElements: 'nav, #popin',
-    scrollOverflow: true,
-    paddingTop: '3.5em',
-    loopHorizontal: false,
-    controlArrows: false,
-	paddingBottom: '1.5rem',
-    afterLoad: function(_, dest) {
-        if (dest.index === 0) {
-            document.querySelector('nav').classList.remove('nav--deployed');
-        } else {
-            document.querySelector('nav').classList.add('nav--deployed');
-        }
-    }
-});
 
 const transformData = () => {
     console.log(`
@@ -288,46 +247,16 @@ ${data.experience.map(exp => `${exp.title}\n${exp.company}\n${exp.dates.start} -
 Technologies: ${exp.mainTechnologies.map(tech => tech.title).join(', ')}, ${exp.otherTechnologies.map(tech => tech.title).join(', ')}
 Projects:\n${exp.projects.map(proj => `${proj.name}: ${proj.description}`).join('\n')}
 Tasks:\n${exp.tasks.map(task => `- ${task}`).join('\n')}`).join('\n\n')}
-
 ${data.projects.map(proj => `${proj.title}\n${proj.description}
 Technologies: ${proj.technologies.map(tech => tech.title).join(', ')}`).join('\n\n')}
-
 ${data.education.map(edu => `${edu.title}\n${edu.school}\n${edu.dates.yEnd}
 ${edu.details.skills.map(skL => `${skL.title}: ${skL.list.join(', ')}`).join('\n')}`).join('\n\n')}`);
 };
 
 const initSections = () => {
-    document.querySelector('#experience-list').innerHTML = data.experience.map(TEMPLATES.experience).join('');
-    document.querySelector('#networks').innerHTML = data.networks.map(TEMPLATES.network).join(`<li class="dot"></li>`);
-    document.querySelector('#services-list').innerHTML = data.services.map(TEMPLATES.service).join('');
-    document.querySelector('#skills-list').innerHTML = data.skills.map(TEMPLATES.skill).join('');
-    document.querySelector('#projects-list').innerHTML = data.projects.map(TEMPLATES.project).join('');
-    document.querySelector('#education-list').innerHTML = data.education.map(TEMPLATES.education).join('') + data.certifications.map(TEMPLATES.certificaton).join('');
-
     document.querySelector('#nav-contact-link').insertAdjacentHTML('beforebegin', data.networks.map(TEMPLATES.navNetwork).join(''));
-
-    document.querySelector('[data-anchor=projects]').insertAdjacentHTML('beforeend', data.projects.map(DETAILS_TEMPLATES.project).join(''));
-    document.querySelector('[data-anchor=experience]').insertAdjacentHTML('beforeend', data.experience.map(DETAILS_TEMPLATES.experience).join(''));
-    document.querySelector('[data-anchor=education]').insertAdjacentHTML('beforeend', data.education.map(DETAILS_TEMPLATES.education).join(''));
-};
-
-const getDribbbleShots = () => {
-    fetch(`https://api.dribbble.com/v2/user/shots?access_token=${KEYS.DRIBBBLE_ACCESS_TOKEN}`)
-        .then(res => {
-            if(!!res.ok) {
-                return Promise.resolve(res);
-            }
-            throw Error('HTTP Error');
-        })
-        .then(data => data.json())
-        .then(json => {
-            document.querySelector('#shots-list').innerHTML = json.map(TEMPLATES.shot).join('');
-            fullpage_api.reBuild();
-        })
-        .catch(err => {
-            document.querySelector('#shots-list').innerHTML = `<li>A problem occured while fetching shots</li>`;
-            console.error(err);
-        });
+    document.querySelector('.Section-projects .content').innerHTML = data.projects.map(TEMPLATES.project2).join('');
+    document.querySelector('#expertise-list').innerHTML = data.skills.filter(s => !!s.expertise).map(TEMPLATES.expertise).join('');
 };
 
 const registerSW = () => {
@@ -341,12 +270,14 @@ const registerSW = () => {
 };
 
 (() => {
+    // POPUP events
+    POPUP_CONTENT = document.querySelector('.popup-content');
+    POPUP = document.querySelector('.popup');
+    document.querySelector('.popup-close').addEventListener('click', () => POPUP.classList.remove('popup--deployed'));
+
     initSections();
-    initFullPage();
-    // Defer Dribbble API call
-    setTimeout(getDribbbleShots, 5000);
 
-    UTILS['move'] = fullpage_api.moveTo;
+    document.querySelectorAll('.scene').forEach(scene => new Parallax(scene));
 
-    registerSW();    
+    //registerSW(); 
 })();

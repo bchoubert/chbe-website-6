@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   height="352"
+   width="352"
+   id="svg4"
+   version="1.1"
+   viewBox="0 0 352 352"
+   role="img"
+   class="svg-inline--fa fa-times fa-w-11"
+   data-icon="times"
+   data-prefix="fas"
+   focusable="false"
+   aria-hidden="true">
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs8" />
+  <path
+     style="fill:currentColor"
+     id="path2"
+     d="m 242.99118,176 100.07,-100.07 c 12.28,-12.28 12.28,-32.19 0,-44.48 l -22.24,-22.2400001 c -12.28,-12.28 -32.19,-12.28 -44.48,0 L 176.27118,109.28 76.201187,9.2099999 c -12.28,-12.28 -32.19,-12.28 -44.48,0 L 9.4811865,31.45 c -12.28,12.28 -12.28,32.19 0,44.48 L 109.55118,176 9.4811865,276.07 c -12.28,12.28 -12.28,32.19 0,44.48 l 22.2400005,22.24 c 12.28,12.28 32.2,12.28 44.48,0 l 100.069993,-100.07 100.07,100.07 c 12.28,12.28 32.2,12.28 44.48,0 l 22.24,-22.24 c 12.28,-12.28 12.28,-32.19 0,-44.48 z" />
+</svg>

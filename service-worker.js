@@ -8,18 +8,14 @@ const filesToCache = [
   'resources/js/params.inc.js',
   'resources/js/data.js',
 
-  'resources/node_modules/fullpage.js/dist/fullpage.min.css',
-  'resources/node_modules/fullpage.js/dist/fullpage.min.js',
-  'resources/node_modules/fullpage.js/vendors/scrolloverflow.min.js',
-
   'resources/img/favicon.png',
 
-  'resources/node_modules/bc-font/dist/bc-font.css',
-  'resources/node_modules/bc-font/dist/bc-font.ttf',
-  'resources/node_modules/bc-font/dist/bc-font.woff',
+  'resources/js/custom-font/dist/chbe-font.css',
+  'resources/js/custom-font/dist/chbe-font.ttf',
+  'resources/js/custom-font/dist/chbe-font.woff',
 
-  'resources/node_modules/@fortawesome/fontawesome-pro/css/solid.min.css',
-  'resources/node_modules/@fortawesome/fontawesome-pro/css/fontawesome.min.css',
+  'resources/node_modules/parallax-js/dist/parallax.min.js',
+  'resources/node_modules/aos/dist/aos.js',
   
   'manifest.json'
 ];
